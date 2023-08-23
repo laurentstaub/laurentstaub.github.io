@@ -1,0 +1,225 @@
+:root {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 100%;
+  font-weight:300;
+ 
+  --main-0: rgb(3, 95, 0);
+  --main-1: rgb(134, 230, 89);
+  --main-2: rgb(204, 255, 206);
+  --main-3: rgb(0, 51, 2);
+  --secondary-0: rgb(95, 0, 92);
+  --secondary-1: rgb(255, 0, 247);
+  --secondary-2: rgb(255, 153, 252);
+  --background-0: rgb(255, 255, 255);
+  --background-1: rgb(245, 245, 230);
+}
+
+body {    
+  background-color: var(--background-0);
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  height: 100%;
+  line-height: 1.8rem;
+  margin-top: 98px;
+  min-height: 100vh;
+}
+
+#content {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+header {
+  background-color: var(--background-0);
+  border-bottom: var(--main-1) solid 2px;
+  border-image: linear-gradient(to right, var(--main-2), var(--main-2)) 1;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 2rem 1rem 1rem 0;
+}
+
+h1 {
+  background-color: var(--main-2);
+  color: var(--main-0);
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+h2 {
+  color: var(--main-0);
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 1rem 1rem 1rem 0;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+li {
+  margin-left: 2rem;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.is-active > a {
+  background-color: var(--main-2);
+  color: var(--main-3);
+  font-weight: 400;
+  padding: 10px 10px 12px 10px;
+}
+
+footer {
+  border-top: var(--main-3) solid 2px;
+  border-image: linear-gradient(to right, var(--main-2), var(--main-2)) 1;
+  color: var(--main-0);
+  font-family: 'DM Serif Display', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+details > summary {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--main-0);
+  font-weight: bold;
+  list-style-type: none;
+  margin: 1rem;
+}
+
+details > summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 5px;
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.main_point {
+  color: var(--main-0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.button {
+  background-color: var(--main-2);
+  border-radius: 4px;
+  color: var(--main-3);
+  display: inline-block;
+  font-weight: 500;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: var(--main-2);
+}
+
+#logo {
+  display: inline-block;
+  width: 300px;
+  margin: 12px 0 0 16px;
+}
+
+#hero {
+  background-color: var(--main-3);
+  border-image: linear-gradient(to right, var(--secondary-0), var(--secondary-1)) 1;
+  color: white;
+  padding: 30px 0 50px 0;
+  text-align: center;
+}
+
+#hero-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#hero-image {
+  margin: 10px 0 0 0;
+  width: 250px;
+}
+
+#hero-paragraph {
+  box-sizing: border-box;
+  display: inline-block;
+  flex: 1;
+}
+
+#hero-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#hero-image > img {
+  width: 250px;
+}
+
+#content > img {
+  margin: 20px 0 0 0;
+  width: 700px;
+}
+
+#lire {
+  background-color: var(--main-2);
+  padding-left: 30px;
+}
+
+.lire-hero {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+}
