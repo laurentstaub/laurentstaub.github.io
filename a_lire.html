@@ -37,43 +37,31 @@
 
   <section id="content">
     <p>
-Voici une série d'articles autour de l'analyse de données sous Excel. Le but de ces articles n'est pas d'être exhaustif et de vous faire découvrir toutes les fonctionnalités d'Excel, des centaines de livres traitent déjà de ce sujet, ni de faire de vous des héros de la donnée. La modeste ambition de ces quelques lignes est de vous <strong>armer du minimum vital pour aborder des projets de données simples et de voir des concepts communs à tout projet d’analyse de données</strong> : depuis leur organisation des données à leur analyse avec un outil que tout le monde possède, Excel, dans le but de répondre à <strong>une question que l’on se pose</strong>.
-    </p>
+    Voici une série d'articles autour de l'analyse de données sous Excel. Le but de ces articles n'est pas d'être exhaustif et de vous faire découvrir toutes les fonctionnalités d'Excel, des centaines de livres traitent déjà de ce sujet, ni de faire de vous des héros de la donnée. La modeste ambition de ces quelques lignes est de vous <strong>armer du minimum vital pour aborder des projets de données simples et de voir des concepts communs à tout projet d’analyse de données</strong> : depuis leur organisation des données à leur analyse avec un outil que tout le monde possède, Excel, dans le but de répondre à <strong>une question que l’on se pose</strong>.</p>
 
-    <p class="main_point">
-Vous n'avez pas besoin de beaucoup de données ni d'outils. Vous avez besoin de répondre à une question
-    </p>
+    <p class="main_point">Vous n'avez pas besoin de beaucoup de données ni d'outils. Vous avez besoin de répondre à une question</p>
     <p>
-Se cantonner à répondre à une question est primordial, car nous pouvons facilement nous faire emporter par un jeu de données et les dernières technologies à la mode. Certes une question peut se préciser, voire se développer au cours d’une analyse, mais au départ de toute cette exploration, un problème à résoudre, même flou, est un minimum vital. Cette question peut même parfois juste être réduite une hypothèse.
-      </p>
-      <p>
-Il m’est arrivé d’explorer un jeu de données de voitures et d’étudier le nombre de voitures de chaque couleur. Puis de faire un graphe de distribution par couleur. Les voitures vertes sont les plus nombreuses. Aucun intérêt. Si, à l’inverse, j’avais postulé que les voitures blanches devaient être majoritaires car plus vendues en France, l’analyse aurait été plus intéressante. La réponse, d’inintéressante au possible, serait devenue surprenante et donc sujette à investigation.
-      </p>
-      <p>
-Pour répondre à une question, <strong>vous devez utiliser le minimum de données nécessaires</strong>. Pas besoin d’aller chercher des centaines de millions de points de données, si une centaine suffisent à répondre à votre question. 
-      </p>
-      <p>
-Mettons que vous ayez une piscine municipale à gérer, et votre responsable vous demande de l’aider à prévoir les pics d’affluence. Il va vraisemblablement vous falloir peu de temps pour trouver un coupable idéal : la température extérieure. Plus il fait chaud, plus il y a de monde à la piscine. Fier de votre hypothèse révolutionnaire, vous passez à la caisse et sortez les données de vente de tickets d’entrée de ces quatre dernières années. Vous faites une petite régression linéaire pour obtenir une courbe qui lie l’influence aux températures extérieures. Bingo! Votre courbe permet de prévoir à 93% les pics d’affluence. Vous n'avez eu besoin que de 365 x 4 lignes + 1 (pour l'année bissextile) pour résoudre votre problème.
-      </p>
-      <p>
-La question qui va se poser maintenant est la suivante: est-ce assez ou va-t-il falloir continuer ? Votre responsable sera peut-être content. Mais peut-être sera-t-il déçu. Il n’avait pas besoin de vous pour savoir que la plupart des pics d’affluence arrivent les jours de grande chaleur. Encore fallait-il le prouver. Peut-être que ce 93% n’est pas assez bon et vous devez aller voir à quoi correspondent ces quelques écarts. Et les quatre années de données de la caisse ne suffiront peut-être plus à répondre à vos questions.
-      </p>
-      <p>
-Ce petit exemple nous montre l’ensemble des problèmes très terre-à-terre qui se cachent derrière de grands mots tels que la data, ou le machine learning (la régression linéaire est, après tout, une technique de base de l'apprentissage machine). Ces mots sont des ensemble de concepts plus ou moins bien définis, plutôt moins que plus d’ailleurs. La réalité qui se cache derrière tout cela est souvent bien moins ésotérique. Et si vous avez juste besoin d’un bout de papier et d’un crayon pour résoudre votre problème, alors ne vous privez surtout pas de l'utiliser.
-      </p>
+    Se cantonner à répondre à une question est primordial, car nous pouvons facilement nous faire emporter par un jeu de données et les dernières technologies à la mode. Certes une question peut se préciser, voire se développer au cours d’une analyse, mais au départ de toute cette exploration, un problème à résoudre, même flou, est un minimum vital. Cette question peut même parfois juste être réduite une hypothèse.</p>
+    <p>
+    Il m’est arrivé d’explorer un jeu de données de voitures et d’étudier le nombre de voitures de chaque couleur. Puis de faire un graphe de distribution par couleur. Les voitures vertes sont les plus nombreuses. Aucun intérêt. Si, à l’inverse, j’avais postulé que les voitures blanches devaient être majoritaires car plus vendues en France, l’analyse aurait été plus intéressante. La réponse, d’inintéressante au possible, serait devenue surprenante et donc sujette à investigation.</p>
+    <p>
+    Pour répondre à une question, <strong>vous devez utiliser le minimum de données nécessaires</strong>. Pas besoin d’aller chercher des centaines de millions de points de données, si une centaine suffisent à répondre à votre question.</p>
+    <p>
+    Mettons que vous ayez une piscine municipale à gérer, et votre responsable vous demande de l’aider à prévoir les pics d’affluence. Il va vraisemblablement vous falloir peu de temps pour trouver un coupable idéal : la température extérieure. Plus il fait chaud, plus il y a de monde à la piscine. Fier de votre hypothèse révolutionnaire, vous passez à la caisse et sortez les données de vente de tickets d’entrée de ces quatre dernières années. Vous faites une petite régression linéaire pour obtenir une courbe qui lie l’influence aux températures extérieures. Bingo! Votre courbe permet de prévoir à 93% les pics d’affluence. Vous n'avez eu besoin que de 365 x 4 lignes + 1 (pour l'année bissextile) pour résoudre votre problème.</p>
+    <p>
+    La question qui va se poser maintenant est la suivante: est-ce assez ou va-t-il falloir continuer ? Votre responsable sera peut-être content. Mais peut-être sera-t-il déçu. Il n’avait pas besoin de vous pour savoir que la plupart des pics d’affluence arrivent les jours de grande chaleur. Encore fallait-il le prouver. Peut-être que ce 93% n’est pas assez bon et vous devez aller voir à quoi correspondent ces quelques écarts. Et les quatre années de données de la caisse ne suffiront peut-être plus à répondre à vos questions.</p>
+    <p>
+    Ce petit exemple nous montre l’ensemble des problèmes très terre-à-terre qui se cachent derrière de grands mots tels que la data, ou le machine learning (la régression linéaire est, après tout, une technique de base de l'apprentissage machine). Ces mots sont des ensemble de concepts plus ou moins bien définis, plutôt moins que plus d’ailleurs. La réalité qui se cache derrière tout cela est souvent bien moins ésotérique. Et si vous avez juste besoin d’un bout de papier et d’un crayon pour résoudre votre problème, alors ne vous privez surtout pas de l'utiliser.</p>
 
-<p class="main_point">Pourquoi Excel ?</p>
-  <p>
-Nous pourrions nous poser la question de la pertinence d'Excel en 2023. En effet, vous avez certainement entendu parler d'outils tels que Looker Studio, Tableau ou, pour rester chez Microsoft, Power BI. Et les équipes marketing de ces outils ont fait du très bon travail pour reléguer Excel au second plan. Mais ce serait oublier que <strong>ces outils occupent une place différente sur l'échiquier de la data</strong>.
-  </p>
+    <p class="main_point">Pourquoi Excel ?</p>
     <p>
-Chaque logiciel ou langage de programmation n'est qu'un outil, adapté à certaines situations. Par exemple, Looker/Data Studio est construit sur Google Analytics, lui-même construit sur les données de trafic de sites internet. C'est donc un outil bâti autour de l'analyse de ces éléments. Power BI présente des avantages certains au niveau du partage des visuels produits, mais sa mise en place reste lourde. Python est un bon langage pour faire des maths, des modèles d’analyse, mais je préfère pour le reste travailler avec Javascript et ses bizarreries.
-    </p>
+    Nous pourrions nous poser la question de la pertinence d'Excel en 2023. En effet, vous avez certainement entendu parler d'outils tels que Looker Studio, Tableau ou, pour rester chez Microsoft, Power BI. Et les équipes marketing de ces outils ont fait du très bon travail pour reléguer Excel au second plan. Mais ce serait oublier que <strong>ces outils occupent une place différente sur l'échiquier de la data</strong>.</p>
     <p>
-Or, les projets avec base de données relationnelles et/ou de l'analytique avec un outil de type Looker ou Power BI sont plus lourds à mettre en place. Excel est plus rapide et plus flexible, et permet d'avoir une vision transversale de toutes les étapes d'un projet d'analyse ou de reporting. Des ancêtres d’Excel existent depuis les années 60, la présentation sous forme de tableur a quelque chose de naturel pour nous. Cela était valide il y a 50 ans, ce le sera vraisemblablement aussi dans 50 ans.
-    </p>
+    Chaque logiciel ou langage de programmation n'est qu'un outil, adapté à certaines situations. Par exemple, Looker/Data Studio est construit sur Google Analytics, lui-même construit sur les données de trafic de sites internet. C'est donc un outil bâti autour de l'analyse de ces éléments. Power BI présente des avantages certains au niveau du partage des visuels produits, mais sa mise en place reste lourde. Python est un bon langage pour faire des maths, des modèles d’analyse, mais je préfère pour le reste travailler avec Javascript et ses bizarreries.</p>
     <p>
-Les plus d’Excel:
+    Or, les projets avec base de données relationnelles et/ou de l'analytique avec un outil de type Looker ou Power BI sont plus lourds à mettre en place. Excel est plus rapide et plus flexible, et permet d'avoir une vision transversale de toutes les étapes d'un projet d'analyse ou de reporting. Des ancêtres d’Excel existent depuis les années 60, la présentation sous forme de tableur a quelque chose de naturel pour nous. Cela était valide il y a 50 ans, ce le sera vraisemblablement aussi dans 50 ans.</p>
+    <p>
+    Les plus d’Excel:
       <ul>
         <li>Excel est disponible partout, tout le monde le connait et sait s'en servir, pour le meilleur et pour le pire.</li>
         <li>Un projet Excel est rapide à mettre en œuvre. Certains problèmes ne nécessitent pas de quantités astronomiques de données pour être résolus et une analyse rapide sous Excel est souvent suffisante.</li>
@@ -90,14 +78,23 @@ Les moins d'Excel:
       <li>Les fonctionnalités de partage et de protection des fichiers sont des ajouts peu fonctionnels, des outils comme Power BI seront souvent plus adaptés pour le partage de rapports avec des personnes extérieures.</li>
     </p>
     <p>
-En résumé, Excel permet de voir tous les éléments du traitement de la donnée dans un seul logiciel : stockage, organisation, traitement analytique et visualisation. Il y a très peu d’abstraction dans Excel, ce qui en fait un outil intéressant pour débuter, mais parfois aussi pour aller plus loin. De plus, Excel évolue rapidement et devrait par exemple bientôt intégrer Python.
-    </p>
-    </details>
+    En résumé, Excel permet de voir tous les éléments du traitement de la donnée dans un seul logiciel : stockage, organisation, traitement analytique et visualisation. Il y a très peu d’abstraction dans Excel, ce qui en fait un outil intéressant pour débuter, mais parfois aussi pour aller plus loin. De plus, Excel évolue rapidement et devrait par exemple bientôt intégrer Python.</p>
+
+    <p class="main_point">Les données avec les données, l'analyse avec l'analyse</p>
+    <p>
+    Lorsqu'un projet dépasse la taille d'une feuille de travail, il est très important de commencer à organiser ses onglets ou fichiers et de bien séparer les objectifs de chaque partie. C'est un peu comme en cuisine. Si vous êtes seul, vous pouvez manger dans votre cuisine ou dans votre canapé, cela n'a pas d'importance. Si vous avez des invités, vous allez éplucher les légumes dans la cuisine, et vous servirez vos plats dans le salon. Pas l'inverse. Et si devez organiser un banquet pour 100 personnes, il vous faudra une équipe et une organisation bien huilée. L'analyse de données, c'est exactement la même chose.</p>
+
+    <blockquote>Une place pour chaque chose et chaque chose à sa place.</blockquote>
+    
+    <p>
+    Plus généralement, nous pourrions parler de <strong>séparation des préoccupations</strong>. Même si ce concept nous vient de la programmation, il convient bien à ce que nous essayons de décrire ici. Il conviendrait d'ailleurs à bien d'autres domaines comme l'architecture, la cuisine, la politique (et la séparation des pouvoirs) et bien d'autres encore. Chaque chose a sa place.
+
+    <p>
+    Dans le traitement des données, il est important de bien <strong>séparer les données, leur analyse et leur présentation</strong>, et de clarifier aussi bien pour vous que pour vos interlocuteurs quel onglet ou fichier fait quoi. Cela est d'autant plus vrai que l'ampleur du projet est importante. Mélanger analyse et données vous expose, entre autres, à des problèmes de maintenance de vos fichiers. D'ailleurs, je dirais que quelqu'un qui a clairement conscience de la différence entre un tableau d'analyse et un tableau de données possède déjà une culture générale de la donnée non négligeable.</p>
+
   </section>
   
-  <footer>
-    Antheos Data 2023
-  </footer>
+  <footer>Antheos Data 2023</footer>
 </body>
 
 </html>
