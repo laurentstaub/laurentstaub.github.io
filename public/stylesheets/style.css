@@ -9,7 +9,7 @@
   --main-2-soft: rgba(204, 255, 206, 0.3);
   --main-3: rgb(0, 51, 2);
   --secondary-0: rgb(95, 0, 92);
-  --secondary-1: rgb(255, 0, 247);
+  --secondary-1: rgb(255, 0, 255);
   --secondary-2: rgb(255, 153, 252);
   --background-0: rgb(255, 255, 255);
   --background-1: rgb(245, 245, 230);
@@ -110,6 +110,33 @@ h2 {
 
 .lire {
   margin-bottom: 30px;
+}
+
+#announcement-bar {
+  align-items: center;
+  background-color: var(--main-1);
+  color: var(--main-3);
+  display: flex;
+  font-size: 1.4em;
+  font-family: 'DM Serif Display', Georgia, 'Times New Roman', Times, serif;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+#announcement-bar a {
+  color: var(--secondary-0);
+  margin-left: 10px;
+}
+
+#announcement-bar a:hover {
+  color: var(--secondary-1);
+}
+
+#announcement-bar a:visited {
+  color: var(--secondary-1);
 }
 
 p {
