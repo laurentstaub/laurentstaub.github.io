@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} — Antheos Data</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{ogUrl}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ogUrl}}">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="alternate" hreflang="fr" href="{{hreflangFr}}">
+  <link rel="alternate" hreflang="en" href="{{hreflangEn}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../public/stylesheets/style.css">
+  <link rel="icon" href="../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Aller au contenu</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — accueil">
+        <img id="logo" src="../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li class="is-active"><a href="../a_lire.html" aria-current="page">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Choix de la langue">
+          <span class="lang-current">FR</span>
+          <span aria-hidden="true"> · </span>
+          <a href="{{twinUrl}}" lang="en" hreflang="en">EN</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+      <h1>{{title}}</h1>
+      <p class="article-meta">{{meta}}</p>
+
+{{body}}
+
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Conseil en pilotage de portefeuille de projets, sélection d'investissements,
+          implémentation de l'IA et business planning.
+        </p>
+      </div>
+      <nav aria-label="Navigation pied de page">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li><a href="../a_lire.html">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://app.antheosdata.com">Outil pénuries</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — RCS Paris 948 306 865 · 59 rue de Ponthieu, Bureau 326, 75008 Paris</span>
+    </div>
+  </footer>
+
+</body>
+</html>
