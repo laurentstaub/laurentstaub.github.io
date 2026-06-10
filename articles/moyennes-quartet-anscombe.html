@@ -13,9 +13,8 @@
   <meta property="og:locale" content="fr_FR">
   <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/moyennes-quartet-anscombe.html">
   <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/averages-anscombe-quartet.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../public/stylesheets/style.css">
   <link rel="icon" href="../public/images/favicon.ico">
   <link rel="icon" type="image/png" href="../public/images/favicon.png">
@@ -51,9 +50,9 @@
       <h1>Le quartet d'Anscombe, ou pourquoi vos moyennes vous mentent</h1>
       <p class="article-meta">Données · Visualisation · Décision</p>
 
-<p>Il y a une question que je me pose à chaque tableau de bord qu&#39;on me présente : pourquoi se donner la peine de faire un graphique ? Après tout, un tableau de statistiques bien rangé — une moyenne par-ci, un écart-type par-là — devrait suffire à se faire une idée. C&#39;est une objection sérieuse, et la meilleure réponse que je connaisse tient en quatre nuages de points. Elle nous vient d&#39;un statisticien anglais, Francis Anscombe, qui publia en 1973 un petit article appelé à devenir célèbre.</p>
+<p>Pourquoi se donner la peine de faire un graphique ? Après tout, un tableau de statistiques bien ordonné — une moyenne, un écart-type, d&#39;autres données statistiques — devrait suffire à se faire une idée d&#39;un ensemble de données. Un dessin vaut un long discours, paraît-il. Mais peut-être en vaut-il plus ? La réponse nous vient d&#39;un statisticien anglais, Francis Anscombe, qui publia en 1973 un petit article appelé à devenir célèbre.</p>
 <h2>Quatre jeux de données, des statistiques identiques</h2>
-<p>Anscombe construit quatre ensembles de onze points chacun. Il les choisit de telle sorte qu&#39;ils partagent <strong>exactement les mêmes caractéristiques statistiques</strong> : même moyenne en x, même moyenne en y, même variance, même corrélation, et donc la même droite de régression (y = 3 + 0,5 x). Sur le papier, dans n&#39;importe quel rapport, ces quatre jeux seraient strictement interchangeables.</p>
+<p>Anscombe construit quatre ensembles de onze points chacun. Il les choisit de telle sorte qu&#39;ils partagent <strong>exactement les mêmes caractéristiques statistiques</strong> : même moyenne en x, même moyenne en y, même variance, même corrélation, et donc la même droite de régression (y = 3 + 0,5 x). Sur le papier, pour n&#39;importe quel rapport statistique, ces quatre jeux de données sont interchangeables.</p>
 <div class="image-frame" style="border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px 20px;background:var(--tint);margin:2rem 0;font-size:var(--text-sm);color:var(--muted);text-align:center;">
         Pour les quatre jeux : moyenne x = 9,0 · moyenne y = 7,5 · variance x = 11,0 · variance y = 4,1 · corrélation = 0,82 · droite : y = 3 + 0,5 x
       </div>
@@ -134,12 +133,12 @@
 <p>Et là, tout change. Le premier jeu est ce que la statistique nous laissait imaginer : un nuage banal autour d&#39;une droite. Le deuxième n&#39;est pas linéaire du tout — c&#39;est une courbe parfaite, et la droite de régression passe à côté du sujet. Le troisième est une droite quasi parfaite, sauf <strong>un seul point aberrant</strong> qui suffit à faire pivoter toute la régression. Le quatrième est encore plus brutal : tous les x sont identiques sauf un, et c&#39;est ce point unique, isolé à droite, qui crée à lui seul l&#39;illusion d&#39;une relation.</p>
 <h2>Le résumé efface ce qui compte</h2>
 <p>Voilà l&#39;essentiel : <strong>quatre histoires radicalement différentes, parfaitement invisibles dans les chiffres résumés</strong>. Si l&#39;on vous avait remis le seul tableau de statistiques, vous auriez traité ces quatre situations de la même manière. Or elles n&#39;appellent pas du tout les mêmes décisions. Le jeu II vous demande de changer de modèle. Le jeu III vous demande d&#39;aller comprendre cet unique point aberrant — erreur de saisie ? cas particulier riche d&#39;enseignements ? Le jeu IV vous dit que votre belle corrélation ne repose que sur une seule observation, et qu&#39;elle s&#39;effondrera à la prochaine.</p>
-<p>Un résumé statistique, par construction, jette de l&#39;information pour en garder une version compacte. C&#39;est utile, mais ce n&#39;est jamais neutre : il décide à votre place de ce qui mérite d&#39;être vu. La moyenne d&#39;un service d&#39;urgences qui tourne tranquillement et celle d&#39;un service qui alterne nuits mortes et nuits de crise peuvent être identiques. C&#39;est rarement la moyenne qui vous intéresse.</p>
+<p>Un résumé statistique, par construction, jette de l&#39;information pour en garder une version compacte. C&#39;est utile, mais ce n&#39;est jamais neutre : il décide à votre place de ce qui mérite d&#39;être vu.</p>
 <blockquote>
 <p>La moyenne est une opinion sur les données, pas les données.</p>
 </blockquote>
 <h2>Ce que cela change pour qui décide</h2>
-<p>On retrouve ici, sous une forme imagée, l&#39;idée qui traverse tout mon travail : <a href="../articles/business-plan-liste-hypotheses.html">le chiffre n&#39;est qu&#39;une conséquence</a>, et la décision se joue dans ce qu&#39;il y a en dessous. Un KPI sur un tableau de bord, c&#39;est un résumé statistique de plus. Il peut très bien cacher un jeu II, un jeu III ou un jeu IV — une tendance qui s&#39;infléchit, un client qui pèse à lui seul toute la croissance, une moyenne qui réconcilie deux populations opposées.</p>
+<p>On retrouve ici, sous une forme imagée, l&#39;idée qui traverse tout notre travail : <a href="../articles/business-plan-liste-hypotheses.html">le chiffre n&#39;est qu&#39;une conséquence</a>, et la décision se joue dans ce qu&#39;il y a en dessous. Un KPI sur un tableau de bord, c&#39;est un résumé statistique de plus. Il peut très bien cacher un jeu II, un jeu III ou un jeu IV — une tendance qui s&#39;infléchit, un client qui pèse à lui seul toute la croissance, une moyenne qui réconcilie deux populations opposées.</p>
 <p>La parade ne coûte presque rien. Avant de décider sur un chiffre agrégé, <strong>regardez la distribution qu&#39;il résume</strong> : un nuage de points, un histogramme, la série dans le temps. Trente secondes pour vérifier que le chiffre ne ment pas par omission. C&#39;est exactement la discipline que nous appliquons quand nous instruisons un dossier d&#39;investissement ou que nous mettons à plat un portefeuille de projets : ne jamais laisser un indicateur seul tenir lieu de réalité.</p>
 <p>Anscombe a eu besoin de quatre dessins là où mille mots n&#39;auraient pas suffi. C&#39;est un peu l&#39;ironie de la chose : la meilleure démonstration de l&#39;utilité des graphiques est elle-même un graphique. La prochaine fois qu&#39;on vous tend une moyenne, ne demandez pas seulement « combien ? ». Demandez : « à quoi ressemble la distribution ? ».</p>
 

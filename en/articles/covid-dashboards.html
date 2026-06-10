@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The COVID dashboards, or why the simplest one won — Antheos Data</title>
+  <meta name="description" content="During the pandemic, the Johns Hopkins dashboard got the praise — and Worldometer got the visitors. What that duel teaches anyone who wants to make data speak.">
+  <link rel="canonical" href="https://www.antheosdata.com/en/articles/covid-dashboards.html">
+  <meta property="og:title" content="The COVID dashboards, or why the simplest one won">
+  <meta property="og:description" content="During the pandemic, the Johns Hopkins dashboard got the praise — and Worldometer got the visitors. What that duel teaches anyone who wants to make data speak.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/en/articles/covid-dashboards.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/tableaux-de-bord-covid.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/covid-dashboards.html">
+  <link rel="preload" href="../../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../public/stylesheets/style.css">
+  <link rel="icon" href="../../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Skip to content</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — home">
+        <img id="logo" src="../../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li class="is-active"><a href="../insights.html" aria-current="page">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Language selection">
+          <a href="../../articles/tableaux-de-bord-covid.html" lang="fr" hreflang="fr">FR</a>
+          <span aria-hidden="true"> · </span>
+          <span class="lang-current">EN</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../insights.html" class="back-link">← All articles</a>
+      <h1>The COVID dashboards, or why the simplest one won</h1>
+      <p class="article-meta">Visualization · Public health</p>
+
+<p>In early 2020, the whole world woke up each morning asking the same question: &quot;where do things stand with the epidemic?&quot;. Two sites set out to answer it. On one side, the Johns Hopkins University (JHU) dashboard: a prestigious university, leading scientists, the backing of major organizations and the media — Time magazine would go so far as to name the project&#39;s lead among the 100 most influential people in the world. On the other, Worldometer, a site with a pedigree so discreet that CNN called it a &quot;mysterious website sowing confusion&quot;. Yet if you look at the numbers, the verdict is unambiguous: in April 2020, Worldometer became the 28th most visited site on the entire web, traffic multiplied by 370 in a year, and a tenfold gap with the JHU site. <strong>The general public — and some governments — chose the site without prestige.</strong> Why?</p>
+<h2>One question, one chart</h2>
+<p>What did Worldometer offer that was more? Nothing. That is precisely the point: they offered <em>less</em>. At the top of the page, a single chart — the number of daily cases since the start of the epidemic. It answers exactly the question the visitor came to ask: &quot;where do we stand?&quot;. Colors are kept to a minimum, a touch of green for recoveries. Below it, a table by country that serves as both a measuring instrument and a navigation tool. Nothing clever, nothing spectacular — and nothing standing between the question and its answer.</p>
+<figure>
+        <img src="../../public/images/articles/covid-worldometer.jpg" alt="Homepage of Worldometer's coronavirus section: three figures and a daily-cases chart">
+        <figcaption>Worldometer's landing screen: three figures, one chart, one answer (viewed in 2024)</figcaption>
+      </figure>
+
+
+<p>It is the same discipline as in <a href="../../en/articles/analyzing-data-in-excel.html">any analysis</a>: you start from a question, not from the available data. Worldometer built a page; JHU built a showcase.</p>
+<blockquote>
+<p>A dashboard is not judged by what it shows, but by the question it answers.</p>
+</blockquote>
+<h2>The dashboard that tried to say too much</h2>
+<p>The JHU dashboard, for its part, displays three categories of data at the top, three more on the right, and two maps in the center. The information everyone comes looking for — how cases are evolving — is relegated to a corner, competing with vaccination tracking that would have deserved its own page. Three stacked charts carry three different colors and three different scales: 25 million cases, 120,000 deaths, 350 million doses. A factor of 3,000 between two neighboring curves — gymnastics the reader has to perform, or not. I would guess that roughly 99% of the people faced with such a heap of statistics do not really understand what they are being shown.</p>
+<figure>
+        <img src="../../public/images/articles/covid-jhu-dashboard.jpg" alt="Johns Hopkins University COVID dashboard: dark maps in the center, three charts on different scales on the right">
+        <figcaption>The Johns Hopkins University dashboard: three scales, six colors, two maps — and the answer, somewhere</figcaption>
+      </figure>
+
+
+<p>The colors tell the same confused, muddled story: red for cases, green for vaccinations, white for deaths. Beyond the fact that red and green swap meanings in some cultures, roughly 300 million people struggle to tell those two colors apart. As for white for deaths, it simply means nothing. When the use of color obeys no rule, it usually means no one stopped to ask the question.</p>
+<h2>Maps, or form over substance</h2>
+<p>The most questionable choice sits in the center: the world map, served by default in Mercator projection. Greenland, Canada and Russia — about 2% of the world&#39;s population — occupy the top third of the screen, Antarctica the bottom third. Red dots pile up on it to the point of illegibility. And above all, a map is <strong>static</strong>: it says nothing about yesterday&#39;s situation or last month&#39;s, when the only question that matters is whether the epidemic is improving or getting worse.</p>
+<figure>
+        <img src="../../public/images/articles/covid-jhu-carte.jpg" alt="World map on the JHU COVID site in Mercator projection: illegible red dots, Antarctica taking up the bottom third">
+        <figcaption>The map loaded by default on the JHU site: Antarctica occupies a third of the screen, the dots overlap to the point of illegibility</figcaption>
+      </figure>
+
+
+<p>The argument is not that maps are always bad. The Robert Koch Institute, in Germany, made good use of one: a uniform administrative breakdown, few indicators, consistent colors — at the scale of a single country, the map works.</p>
+<p>At the scale of the world, with entities ranging from the Vatican to Russia, it decorates more than it informs. The evolution of the JHU site is, in fact, an admission of failure: starting from a full-screen map in January 2020, it gradually moved away from the map to bring in… the bar chart. Without ever quite bringing itself to remove the maps.</p>
+<figure>
+        <img src="../../public/images/articles/covid-institut-koch.jpg" alt="Robert Koch Institute COVID dashboard: map of Germany by Länder in shades of blue, few indicators">
+        <figcaption>The Robert Koch Institute dashboard: uniform regions, a single hue, a map that works (April 2020)</figcaption>
+      </figure>
+
+
+<p>Add the technical side: an interactive map is heavy, slow to load, and designed for a large screen — whereas in 2020, half of the world&#39;s web traffic was on mobile. Maps and small vertical screens do not necessarily get along. That is an understatement. Meanwhile, Worldometer&#39;s vertical page displayed the same way everywhere. Visitors wanted quick daily information. They had it.</p>
+<h2>The hidden battle: the data</h2>
+<p>One might be tempted to think Worldometer won through the chart. Not only that. Another decisive battle was being fought elsewhere, far from the screens: in collection. Official reports, press conferences, hospital bulletins, health-authority posts on social media — with no common definitions and no standard format. Worldometer compiled these sources by hand, continuously, from the very start of the pandemic. JHU eventually wrote scripts to scrape 400 sources every half hour, but started later — and while it was criticizing Worldometer&#39;s methods, it ended up using it as one of its own sources.</p>
+<p>This is a near-constant of data work, and it is widely underestimated: <strong>the sources are heterogeneous, and processing them requires human judgments</strong> that no tool automates out of the box. We would no doubt like to believe that numbers can be &quot;clean&quot;, and that a university team should have the upper hand in the battle of statistics. But there is no &quot;clean&quot; collection process — there are only choices, more or less well documented. The dashboard is merely the visible part; the quality of what it displays is decided upstream, in that thankless work.</p>
+<h2>What to take away</h2>
+<p>Simple, fluid technologies, backed by solid data processing, beat more complex and more spectacular tools. That is the lesson of COVID, and it holds for any corporate report: the overloaded dashboard that wants to say everything, <a href="../../en/articles/averages-anscombe-quartet.html">like the average that summarizes too much</a>, ends up saying nothing at all.</p>
+<p>We applied these lessons to the letter when building our <a href="https://app.antheosdata.com">drug shortage tracking tool</a>: one question — which drugs are in short supply, and since when? —, one page that answers it, and behind it the real work: collecting and shaping dispersed public data.</p>
+<p>Next time someone presents you with a dashboard, do not ask what it can display. Ask what question it answers. If the answer does not appear within ten seconds, it means no one asked the question.</p>
+
+
+      <a href="../insights.html" class="back-link">← All articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Advisory in project portfolio management, investment selection,
+          AI implementation and business planning.
+        </p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://app.antheosdata.com">Shortage tracker</a></li>
+          <li><a href="../legal.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — Paris Trade Register 948 306 865 · 59 rue de Ponthieu, Office 326, 75008 Paris, France</span>
+    </div>
+  </footer>
+
+</body>
+</html>

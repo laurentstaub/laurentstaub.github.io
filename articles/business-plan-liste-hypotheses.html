@@ -13,9 +13,8 @@
   <meta property="og:locale" content="fr_FR">
   <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/business-plan-liste-hypotheses.html">
   <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/business-plan-list-of-assumptions.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../public/stylesheets/style.css">
   <link rel="icon" href="../public/images/favicon.ico">
   <link rel="icon" type="image/png" href="../public/images/favicon.png">
@@ -51,24 +50,25 @@
       <h1>Un business plan est une liste d'hypothèses déguisée en tableur</h1>
       <p class="article-meta">Business planning · Hypothèses</p>
 
-<p>Au fil des années, j&#39;ai lu, construit et corrigé un bon nombre de business plans. Des ambitieux, des prudents, des bardés d&#39;onglets et de macros. Tous avaient un point commun : on me parlait beaucoup de leurs chiffres, et très peu de ce qui les faisait tenir debout. La modeste ambition de cet article est de vous proposer un changement de regard : arrêter de lire un business plan comme une prédiction chiffrée, et commencer à le lire comme ce qu&#39;il est vraiment — <strong>une liste d&#39;hypothèses déguisée en tableur</strong>.</p>
+<p>Au fil des années, j&#39;ai lu et construit un bon nombre de business plans. Des ambitieux, surtout, des prudents, rarement. Tous avaient un point commun : on parlait beaucoup de leurs chiffres, et finalement peu de ce qui les faisait tenir debout. L&#39;ambition de cet article est de vous proposer un changement de regard : arrêter de lire un business plan comme une prédiction chiffrée, et commencer à le lire comme ce qu&#39;il est vraiment — <strong>une liste d&#39;hypothèses déguisée en tableur</strong>. Ou de paris sur le futur.</p>
 <h2>Les chiffres ne sont que des conséquences</h2>
-<p>Mettons que vous vouliez lancer un food truck. Votre business plan annonce fièrement : 22 jours d&#39;activité par mois, 60 paniers servis par jour, 12&nbsp;€ le panier. Soit 15&nbsp;840&nbsp;€ de chiffre d&#39;affaires mensuel. Votre tableur vous donnera ce résultat avec deux décimales s&#39;il le faut. Il sera peut-être faux, mais il aura deux décimales.</p>
-<p>D&#39;où viennent ces trois nombres ? Le 22 suppose que vous obtiendrez l&#39;emplacement et que le camion roulera tous les jours ouvrés. Le 60 suppose que les clients viendront, et reviendront. Le 12 suppose qu&#39;ils accepteront ce prix sans sourciller. Trois paris. Le 15&nbsp;840, lui, n&#39;est pas une information : c&#39;est <strong>une conséquence arithmétique de trois paris</strong>.</p>
+<p>Mettons que vous prépariez le lancement d&#39;un médicament. Votre business plan annonce fièrement : 50&nbsp;000 patients diagnostiqués, 20&nbsp;% d&#39;entre eux traités par votre produit, 12 boîtes par patient et par an. Soit 120&nbsp;000 boîtes vendues chaque année. Votre tableur vous donnera ce résultat avec deux décimales s&#39;il le faut. Il sera peut-être faux, mais il aura deux décimales.</p>
+<p>D&#39;où viennent ces trois nombres ? Le 50&nbsp;000 suppose que la population de patients existe, qu&#39;elle est diagnostiquée et qu&#39;elle est accessible. Le 20&nbsp;% suppose que les prescripteurs choisiront votre produit — et que le remboursement suivra. Le 12 suppose que les patients prendront leur traitement toute l&#39;année, sans interruption. Trois paris. Le 120&nbsp;000, lui, n&#39;est pas une information : c&#39;est <strong>une conséquence arithmétique de trois paris</strong>.</p>
 <div class="illustration">
-        <svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trois paris déguisés en chiffres : jours, paniers, prix — et leur conséquence arithmétique">
+        <svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trois paris déguisés en chiffres : patients, pénétration, posologie — et leur conséquence arithmétique">
           <g font-size="16" font-weight="600" text-anchor="middle">
             <rect x="20"  y="40" width="130" height="56" rx="8" fill="#ecf5e8" stroke="#4caf5e"/>
-            <text x="85"  y="73" fill="#0b4912">22 jours</text>
+            <text x="85"  y="66" fill="#0b4912">50 000</text>
+            <text x="85"  y="84" fill="#0b4912" font-size="12" font-weight="400">patients</text>
             <rect x="190" y="40" width="130" height="56" rx="8" fill="#ecf5e8" stroke="#4caf5e"/>
-            <text x="255" y="66" fill="#0b4912">60 paniers</text>
-            <text x="255" y="84" fill="#0b4912" font-size="12" font-weight="400">/ jour</text>
+            <text x="255" y="66" fill="#0b4912">20 %</text>
+            <text x="255" y="84" fill="#0b4912" font-size="12" font-weight="400">traités</text>
             <rect x="360" y="40" width="130" height="56" rx="8" fill="#ecf5e8" stroke="#4caf5e"/>
-            <text x="425" y="66" fill="#0b4912">12 €</text>
-            <text x="425" y="84" fill="#0b4912" font-size="12" font-weight="400">/ panier</text>
+            <text x="425" y="66" fill="#0b4912">12 boîtes</text>
+            <text x="425" y="84" fill="#0b4912" font-size="12" font-weight="400">/ patient / an</text>
             <rect x="530" y="40" width="130" height="56" rx="8" fill="#0b4912"/>
-            <text x="595" y="66" fill="#ffffff">15 840 €</text>
-            <text x="595" y="84" fill="#ffffff" font-size="12" font-weight="400">/ mois</text>
+            <text x="595" y="66" fill="#ffffff">120 000</text>
+            <text x="595" y="84" fill="#ffffff" font-size="12" font-weight="400">boîtes / an</text>
           </g>
           <g font-size="20" fill="#56684f" text-anchor="middle">
             <text x="170" y="74">×</text>
@@ -82,9 +82,9 @@
             <line x1="595" y1="96" x2="595" y2="140" stroke="#56684f"/>
           </g>
           <g font-size="13" text-anchor="middle" fill="#0b4912" font-style="italic">
-            <text x="85"  y="160">un pari d'exploitation</text>
-            <text x="255" y="160">un pari de demande</text>
-            <text x="425" y="160">un pari de prix</text>
+            <text x="85"  y="160">un pari d'épidémiologie</text>
+            <text x="255" y="160">un pari d'adoption</text>
+            <text x="425" y="160">un pari d'observance</text>
             <text x="595" y="160" fill="#56684f">une conséquence</text>
             <text x="595" y="178" fill="#56684f">arithmétique</text>
           </g>
@@ -94,7 +94,7 @@
 
 <p>Et c&#39;est vrai de chaque cellule du fichier. L&#39;EBITDA de l&#39;année 3 est probablement l&#39;un des chiffres les plus regardés et les moins informatifs qui soient : c&#39;est un empilement de dizaines de paris, multipliés les uns par les autres. Tant que ces paris restent implicites, le plan a l&#39;air solide. C&#39;est précisément ce qui devrait vous inquiéter.</p>
 <h2>Le test de la cellule</h2>
-<p>Le bon réflexe tient en une question. Prenez n&#39;importe quel chiffre du plan et demandez : <strong>qu&#39;est-ce qui doit être vrai pour que cette cellule dise vrai ?</strong> Posez-la trois ou quatre fois de suite, et vous verrez remonter à la surface des choses que le tableur ne montre pas :</p>
+<p>Le bon réflexe tient en une question. Prenez n&#39;importe quel chiffre du plan et demandez : <strong>qu&#39;est-ce qui doit être vrai pour que cette cellule dise vrai ?</strong> Vous verrez remonter à la surface des choses que le tableur ne montre pas :</p>
 <ul>
 <li>une croissance de 20&nbsp;% par an suppose que les concurrents vous regardent faire sans réagir ;</li>
 <li>une marge stable suppose que vos fournisseurs n&#39;augmenteront pas leurs prix — demandez-leur ce qu&#39;ils en pensent ;</li>
@@ -104,9 +104,9 @@
 <h2>Une hypothèse digne de ce nom est falsifiable</h2>
 <p>Une fois les hypothèses extraites, encore faut-il les écrire correctement. La plupart des hypothèses que l&#39;on croise dans les business plans sont inattaquables — et c&#39;est bien le problème. « Le marché est porteur » ne peut pas être contredit par la réalité ; cette phrase ne risque rien, et ne vous apprend donc rien. Comparez :</p>
 <ul>
-<li>« Le marché est porteur » → « au moins 200 personnes passent devant l&#39;emplacement entre 12&nbsp;h et 14&nbsp;h, et une sur dix s&#39;arrête » ;</li>
-<li>« Les clients seront au rendez-vous » → « nous servons 60 paniers par jour à partir du troisième mois » ;</li>
-<li>« Nous serons rapidement opérationnels » → « le camion est aménagé et homologué en huit semaines ».</li>
+<li>« Le marché est porteur » → « au moins 50&nbsp;000 patients sont diagnostiqués chaque année, et un sur cinq est éligible à notre traitement » ;</li>
+<li>« Les prescripteurs suivront » → « 20&nbsp;% des spécialistes cibles ont prescrit le produit au moins une fois à la fin du sixième mois » ;</li>
+<li>« Nous serons rapidement sur le marché » → « le prix est publié et le remboursement effectif dans les douze mois ».</li>
 </ul>
 <p>La version de gauche est un slogan. La version de droite peut être contredite par la réalité — c&#39;est exactement ce qu&#39;on lui demande. Une hypothèse bien formulée contient <strong>un chiffre, une échéance, et une condition d&#39;échec</strong> : si l&#39;un des trois manque, vous tenez une opinion, pas une hypothèse.</p>
 <blockquote>
@@ -114,11 +114,11 @@
 </blockquote>
 <h2>Toutes les hypothèses ne se valent pas</h2>
 <p>Votre liste fera vite quinze ou vingt lignes, et vous n&#39;aurez ni le temps ni l&#39;argent de tout vérifier. Deux questions suffisent pour trier : <strong>si cette hypothèse casse, le plan survit-il ?</strong> Et : <strong>combien coûte sa vérification ?</strong> Une hypothèse critique et incertaine se teste tout de suite. Une hypothèse critique mais bien documentée se surveille. Une hypothèse secondaire s&#39;inscrit sur la liste et attend son tour.</p>
-<p>Et pour tester, inutile de commander une étude de marché à cinq chiffres. Comme pour <a href="../articles/analyser-des-donnees-dans-excel.html">l&#39;analyse de données</a>, le minimum de données nécessaires suffit. Vous voulez vérifier le pari de demande du food truck ? Allez compter les passants un mardi entre midi et quatorze heures. C&#39;est gratuit, c&#39;est un peu ennuyeux, et cela vaut tous les slides du monde.</p>
+<p>Et pour tester, inutile de commander une étude de marché à cinq chiffres. Comme pour <a href="../articles/analyser-des-donnees-dans-excel.html">l&#39;analyse de données</a>, le minimum de données nécessaires suffit. Vous voulez vérifier le pari d&#39;adoption ? Les bases publiques de l&#39;Assurance Maladie vous diront combien de patients sont déjà traités, et par quoi. C&#39;est gratuit, c&#39;est un peu aride, et cela vaut tous les slides du monde.</p>
 <h2>Suivre ses hypothèses comme on suit un budget</h2>
 <p>Expliciter et tester, c&#39;est bien. Mais un business plan vit, et ses hypothèses vieillissent — certaines bien, d&#39;autres mal. La discipline qui change tout est pourtant modeste : à chaque revue mensuelle ou trimestrielle, relisez la liste. Pour chaque hypothèse : toujours vraie, fragilisée, ou contredite. Vert, orange, rouge. Dix minutes.</p>
 <p>Le jour où une hypothèse critique passe au rouge, la décision — poursuivre, pivoter, arrêter — n&#39;est plus une affaire d&#39;ego ni de rapport de force : <strong>elle est écrite dans la liste depuis le début</strong>. C&#39;est cette discipline, expliciter puis tester puis suivre, qui fait la différence entre un plan qu&#39;on subit et un plan qu&#39;on pilote. C&#39;est d&#39;ailleurs le cœur de <a href="../approche.html">notre approche</a>.</p>
-<p>La prochaine fois qu&#39;on vous tend un business plan, résistez à l&#39;envie de demander « combien ? ». Demandez plutôt : « qu&#39;est-ce qui doit être vrai ? ». Vous verrez, la conversation change immédiatement de nature.</p>
+<p>La prochaine fois qu&#39;on vous tend un business plan, résistez à l&#39;envie de demander « combien ? ». Demandez plutôt : « qu&#39;est-ce qui doit être vrai ? ».</p>
 
 
       <a href="../a_lire.html" class="back-link">← Tous les articles</a>

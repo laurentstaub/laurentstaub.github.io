@@ -3,6 +3,57 @@
    Design system : palette verte affinée, typographie Fraunces + Inter
    ========================================================================== */
 
+/* ---------- Polices auto-hébergées (fontes variables, woff2) ---------- */
+/* Fraunces : poids 400–700 + axe optique. Inter : poids 400–700. */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 /* ---------- Reset minimal ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
@@ -297,7 +348,7 @@ section.band { padding: 88px 0; }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--leaf);
+  color: var(--brand);
   margin-bottom: 12px;
 }
 
@@ -334,7 +385,7 @@ section.band h2 {
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--leaf);
+  color: var(--brand);
   display: block;
   margin-bottom: 8px;
 }
@@ -403,7 +454,7 @@ section.band h2 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--leaf);
+  color: var(--brand);
   margin-bottom: 10px;
 }
 
@@ -661,14 +712,17 @@ footer a:hover { color: var(--leaf-bright); }
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero-inner { flex-direction: column; gap: 48px; text-align: left; }
-  .hero-visual { order: -1; }
-  .hero-visual svg { width: 200px; height: auto; }
+  /* La décoration ne doit pas passer avant le message sur petit écran */
+  .hero-visual { display: none; }
   .steps { grid-template-columns: 1fr; gap: 28px; }
   .service-grid { grid-template-columns: 1fr; }
   .anchor-split { flex-direction: column; gap: 40px; }
 }
 
 @media (max-width: 768px) {
+  /* En-tête empilé : trop haut pour rester collé en haut de l'écran */
+  header { position: static; }
+
   .header-inner {
     flex-direction: column;
     height: auto;
@@ -699,4 +753,22 @@ footer a:hover { color: var(--leaf-bright); }
   .contact-grid { grid-template-columns: 1fr; }
 
   .article-card { padding: 24px; }
+}
+
+/* ---------- Mouvement réduit (accessibilité) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .btn-primary:hover,
+  .btn-dark:hover,
+  .service-card:hover,
+  .article-card:hover {
+    transform: none;
+  }
 }

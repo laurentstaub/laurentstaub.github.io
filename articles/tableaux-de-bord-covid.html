@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les tableaux de bord du COVID, ou pourquoi le plus simple a gagné — Antheos Data</title>
+  <meta name="description" content="Pendant la pandémie, le tableau de bord de Johns Hopkins recevait les éloges — et Worldometer recevait les visiteurs. Ce que ce duel apprend à qui veut faire parler des données.">
+  <link rel="canonical" href="https://www.antheosdata.com/articles/tableaux-de-bord-covid.html">
+  <meta property="og:title" content="Les tableaux de bord du COVID, ou pourquoi le plus simple a gagné">
+  <meta property="og:description" content="Pendant la pandémie, le tableau de bord de Johns Hopkins recevait les éloges — et Worldometer recevait les visiteurs. Ce que ce duel apprend à qui veut faire parler des données.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/articles/tableaux-de-bord-covid.html">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/tableaux-de-bord-covid.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/covid-dashboards.html">
+  <link rel="preload" href="../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../public/stylesheets/style.css">
+  <link rel="icon" href="../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Aller au contenu</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — accueil">
+        <img id="logo" src="../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li class="is-active"><a href="../a_lire.html" aria-current="page">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Choix de la langue">
+          <span class="lang-current">FR</span>
+          <span aria-hidden="true"> · </span>
+          <a href="../en/articles/covid-dashboards.html" lang="en" hreflang="en">EN</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+      <h1>Les tableaux de bord du COVID, ou pourquoi le plus simple a gagné</h1>
+      <p class="article-meta">Visualisation · Santé publique</p>
+
+<p>Début 2020, le monde entier se pose chaque matin la même question : « où en est l&#39;épidémie ? ». Deux sites se proposent d&#39;y répondre. D&#39;un côté, le tableau de bord de la Johns Hopkins University (JHU) : une université prestigieuse, des scientifiques de premier plan, le soutien des grandes organisations et des médias — le Time ira jusqu&#39;à classer la responsable du projet parmi les 100 personnes les plus influentes du monde. De l&#39;autre, Worldometer, un site au pedigree si discret que CNN le qualifie de « mystérieux site web semant la confusion ». Pourtant si l&#39;on se penche sur les chiffres, le verdict est sans appel : en avril 2020, Worldometer est devenu le 28<sup>e</sup> site le plus consulté du web mondial, un trafic multiplié par 370 en un an, et un écart d&#39;un facteur dix avec le site de la JHU. <strong>Le grand public — et certains gouvernements — ont choisi le site sans prestige.</strong> Pourquoi ?</p>
+<h2>Une question, un graphique</h2>
+<p>Qu&#39;offrait Worldometer de plus ? Rien. C&#39;est précisément le point : ils ont offert <em>moins</em>. En haut de page, un seul graphique — le nombre de cas quotidiens depuis le début de l&#39;épidémie. Il répond exactement à la question que le visiteur vient poser : « où en sommes-nous ? ». Les couleurs sont réduites au minimum, une touche de vert pour les guérisons. En dessous, un tableau par pays qui sert à la fois d&#39;instrument de mesure et de navigation. Rien d&#39;astucieux, rien de spectaculaire — et rien qui s&#39;interpose entre la question et sa réponse.</p>
+<figure>
+        <img src="../public/images/articles/covid-worldometer.jpg" alt="Page d'accueil de la section coronavirus du site Worldometer : trois chiffres et un graphique des cas quotidiens">
+        <figcaption>L'écran d'accueil de Worldometer : trois chiffres, un graphique, une réponse (consulté en 2024)</figcaption>
+      </figure>
+
+
+<p>C&#39;est la même discipline que <a href="../articles/analyser-des-donnees-dans-excel.html">pour toute analyse</a> : on part d&#39;une question, pas des données disponibles. Worldometer a construit une page ; la JHU a construit une vitrine.</p>
+<blockquote>
+<p>Un tableau de bord ne se juge pas à ce qu&#39;il montre, mais à la question à laquelle il répond.</p>
+</blockquote>
+<h2>Le tableau de bord qui voulait trop dire</h2>
+<p>Le tableau de bord de la JHU, lui, affiche trois catégories de données en haut, trois autres à droite, et deux cartes au centre. L&#39;information que tout le monde vient chercher — l&#39;évolution des cas — est reléguée dans un coin, en concurrence avec un suivi de la vaccination qui aurait mérité sa propre page. Trois graphiques empilés portent trois couleurs et trois échelles différentes : 25&nbsp;millions de cas, 120&nbsp;000 morts, 350&nbsp;millions de doses. Un facteur 3&nbsp;000 entre deux courbes voisines — une gymnastique que le lecteur doit faire, ou pas. Je pense qu&#39;environ 99% des personnes confrontées à un tel amas de statistiques ne comprend pas vraiment ce qu&#39;on lui présente.</p>
+<figure>
+        <img src="../public/images/articles/covid-jhu-dashboard.jpg" alt="Tableau de bord COVID de la Johns Hopkins University : cartes sombres au centre, trois graphiques aux échelles différentes à droite">
+        <figcaption>Le tableau de bord de la Johns Hopkins University : trois échelles, six couleurs, deux cartes — et la réponse, quelque part</figcaption>
+      </figure>
+
+
+<p>Les couleurs racontent la même histoire confuse et brouillonne : du rouge pour les cas, du vert pour les vaccinations, du blanc pour les morts. Outre le fait que le rouge et le vert s&#39;inversent dans certaines cultures, environ 300&nbsp;millions de personnes distinguent mal ces deux couleurs précisément. Quant au blanc pour les morts, il ne signifie tout simplement rien. Quand l&#39;usage de la couleur n&#39;obéit à aucune règle, c&#39;est généralement que personne ne s&#39;est posé la question.</p>
+<h2>Les cartes, ou la forme contre le fond</h2>
+<p>Le choix le plus discutable est au centre : la carte mondiale, servie par défaut en projection de Mercator. Le Groenland, le Canada et la Russie — environ 2&nbsp;% de la population mondiale — occupent le tiers supérieur de l&#39;écran, l&#39;Antarctique le tiers inférieur. Des points rouges s&#39;y superposent jusqu&#39;à l&#39;illisible. Et surtout, une carte est <strong>statique</strong> : elle ne dit rien de la situation d&#39;hier ni d&#39;il y a un mois, alors que la seule question qui compte est de savoir si l&#39;épidémie s&#39;améliore ou s&#39;aggrave.</p>
+<figure>
+        <img src="../public/images/articles/covid-jhu-carte.jpg" alt="Carte mondiale du site COVID de la JHU en projection de Mercator : points rouges illisibles, l'Antarctique occupe le tiers inférieur">
+        <figcaption>La carte chargée par défaut sur le site de la JHU : l'Antarctique occupe le tiers de l'écran, les points se chevauchent jusqu'à l'illisible</figcaption>
+      </figure>
+
+
+<p>L&#39;argument n&#39;est pas que les cartes sont toujours mauvaises. L&#39;institut Robert Koch, en Allemagne, en a fait bon usage : un découpage administratif homogène, peu d&#39;indicateurs, des couleurs cohérentes — à l&#39;échelle d&#39;un pays, la carte fonctionne. </p>
+<p>À l&#39;échelle du monde, avec des entités allant du Vatican à la Russie, elle décore plus qu&#39;elle n&#39;informe. L&#39;évolution du site de la JHU est d&#39;ailleurs un aveu d&#39;échec : parti d&#39;une carte plein écran en janvier 2020, il a progressivement délaissé la carte pour intégrer… le graphique en barres. Sans jamais se résoudre à enlever les cartes.</p>
+<figure>
+        <img src="../public/images/articles/covid-institut-koch.jpg" alt="Tableau de bord COVID de l'institut Robert Koch : carte de l'Allemagne par Länder en dégradés de bleu, peu d'indicateurs">
+        <figcaption>Le tableau de bord de l'institut Robert Koch : des régions homogènes, une seule teinte, une carte qui fonctionne (avril 2020)</figcaption>
+      </figure>
+
+
+<p>Ajoutons l&#39;aspect technique : une carte interactive est lourde, lente à charger, et pensée pour un grand écran — alors qu&#39;en 2020, la moitié du trafic web mondial se faisait sur mobile. Les cartes sur petit écran vertical ne font pas forcément bon ménage. C&#39;est un euphémisme. Pendant ce temps, la page verticale de Worldometer s&#39;affichait, elle, de la même façon partout. Les visiteurs voulaient une information quotidienne rapide. Ils l&#39;avaient.</p>
+<h2>La bataille souterraine : les données</h2>
+<p>On serait tenté de croire que Worldometer a gagné par le graphique. Pas que. Une autre bataille décisive se jouait ailleurs, loin des écrans : dans la collecte. Rapports officiels, conférences de presse, bulletins hospitaliers, publications d&#39;autorités sanitaires sur les réseaux sociaux — sans définitions communes ni format standard. Worldometer a compilé ces sources à la main, en continu, depuis le début de la pandémie. La JHU a fini par écrire des scripts pour aspirer 400 sources toutes les demi-heures, mais en partant plus tard, et alors qu&#39;ils critiquaient les méthodes de Worldometer, ils ont fini par le prendre en parti comme source.</p>
+<p>C&#39;est une quasi-constante du travail de la donnée, et elle est largement sous-estimée : <strong>les sources sont hétéroclites, et leur traitement demande des jugements humains</strong> qu&#39;aucun outil n&#39;automatise d&#39;emblée. Nous aimerions vraisemblablement croire que les chiffres peuvent être &quot;propres&quot; et qu&#39;une équipe d&#39;Université devrait avoir le dessus de la bataille des statistiques. Mais il n&#39;existe pas de processus de collecte « propre » — il n&#39;existe que des choix, plus ou moins bien documentés. Le tableau de bord n&#39;est que la partie visible ; la qualité de ce qu&#39;il affiche se décide en amont, dans ce travail ingrat. </p>
+<h2>Ce qu&#39;on en retient</h2>
+<p>Des technologies simples et fluides, adossées à un traitement des données solide, l&#39;emportent sur des outils plus complexes et plus spectaculaires. C&#39;est l&#39;enseignement du COVID, et il vaut pour n&#39;importe quel reporting d&#39;entreprise : le tableau de bord surchargé qui veut tout dire, <a href="../articles/moyennes-quartet-anscombe.html">comme la moyenne qui résume trop</a>, finit par ne plus rien dire.</p>
+<p>Ces leçons, nous les avons appliquées à la lettre en construisant notre <a href="https://app.antheosdata.com">outil de suivi des pénuries de médicaments</a> : une question — quels médicaments sont en tension, et depuis quand ? —, une page qui y répond, et derrière, le vrai travail : la collecte et la mise en forme de données publiques dispersées.</p>
+<p>La prochaine fois qu&#39;on vous présente un tableau de bord, ne demandez pas ce qu&#39;il peut afficher. Demandez à quelle question il répond. Si la réponse n&#39;apparaît pas en dix secondes, c&#39;est que personne n&#39;a posé la question.</p>
+
+
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Conseil en pilotage de portefeuille de projets, sélection d'investissements,
+          implémentation de l'IA et business planning.
+        </p>
+      </div>
+      <nav aria-label="Navigation pied de page">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li><a href="../a_lire.html">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://app.antheosdata.com">Outil pénuries</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — RCS Paris 948 306 865 · 59 rue de Ponthieu, Bureau 326, 75008 Paris</span>
+    </div>
+  </footer>
+
+</body>
+</html>

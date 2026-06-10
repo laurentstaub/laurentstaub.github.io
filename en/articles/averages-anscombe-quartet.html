@@ -13,9 +13,8 @@
   <meta property="og:locale" content="en_US">
   <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/moyennes-quartet-anscombe.html">
   <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/averages-anscombe-quartet.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="../../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../public/stylesheets/style.css">
   <link rel="icon" href="../../public/images/favicon.ico">
   <link rel="icon" type="image/png" href="../../public/images/favicon.png">
@@ -51,7 +50,7 @@
       <h1>Anscombe's quartet, or why your averages lie to you</h1>
       <p class="article-meta">Data · Visualization · Decision-making</p>
 
-<p>There is a question I ask myself at every dashboard I am shown: why bother with a chart at all? After all, a tidy table of statistics — a mean here, a standard deviation there — ought to be enough to form a view. It is a serious objection, and the best answer I know fits in four scatter plots. It comes from an English statistician, Francis Anscombe, who published a short paper in 1973 that went on to become famous.</p>
+<p>Why bother making a chart at all? After all, a well-ordered table of statistics — a mean, a standard deviation, a few other figures — ought to be enough to form a view of a dataset. A picture is worth a thousand words, so they say. But perhaps it is worth more than that? The answer comes from an English statistician, Francis Anscombe, who published a short paper in 1973 that went on to become famous.</p>
 <h2>Four datasets, identical statistics</h2>
 <p>Anscombe builds four sets of eleven points each. He chooses them so that they share <strong>exactly the same statistical characteristics</strong>: the same mean in x, the same mean in y, the same variance, the same correlation, and therefore the same regression line (y = 3 + 0.5 x). On paper, in any report, the four sets would be strictly interchangeable.</p>
 <div class="image-frame" style="border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px 20px;background:var(--tint);margin:2rem 0;font-size:var(--text-sm);color:var(--muted);text-align:center;">
@@ -134,7 +133,7 @@
 <p>And everything changes. The first set is what the statistics led us to imagine: an ordinary cloud around a line. The second is not linear at all — it is a perfect curve, and the regression line misses the point entirely. The third is a near-perfect line, except for <strong>a single outlier</strong> that is enough to swing the whole regression. The fourth is more brutal still: every x is identical but one, and it is that single isolated point on the right that single-handedly creates the illusion of a relationship.</p>
 <h2>The summary erases what matters</h2>
 <p>Here is the heart of it: <strong>four radically different stories, perfectly invisible in the summary numbers</strong>. Had you been handed the table of statistics alone, you would have treated all four situations the same way. Yet they call for entirely different decisions. Set II tells you to change your model. Set III tells you to go and understand that one outlier — a data-entry error? a special case rich in lessons? Set IV tells you your beautiful correlation rests on a single observation, and that it will collapse with the next one.</p>
-<p>A statistical summary, by construction, throws away information to keep a compact version of it. That is useful, but it is never neutral: it decides for you what deserves to be seen. The average of an emergency room ticking along calmly and that of a room alternating dead nights with nights of crisis can be identical. The average is rarely what you care about.</p>
+<p>A statistical summary, by construction, throws away information to keep a compact version of it. That is useful, but it is never neutral: it decides for you what deserves to be seen.</p>
 <blockquote>
 <p>An average is an opinion about the data, not the data.</p>
 </blockquote>

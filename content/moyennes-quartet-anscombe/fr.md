@@ -7,13 +7,13 @@ meta: "Données · Visualisation · Décision"
 summary: "Quatre jeux de données, des statistiques identiques, quatre réalités opposées. La démonstration visuelle que le chiffre résumé ne suffit jamais à décider."
 draft: false
 ---
-Pourquoi se donner la peine de faire un graphique ? Après tout, un tableau de statistiques bien ordonné — une moyenne, un écart-type, d'autres données statistiques — devrait suffire à se faire une idée d'un ensemble de données. Un dessin vaut un long discours parait-il. Elle nous vient d'un statisticien anglais, Francis Anscombe, qui publia en 1973 un petit article appelé à devenir célèbre.
+Pourquoi se donner la peine de faire un graphique ? Après tout, un tableau de statistiques bien ordonné — une moyenne, un écart-type, d'autres données statistiques — devrait suffire à se faire une idée d'un ensemble de données. Un dessin vaut un long discours, paraît-il. Mais peut-être en vaut-il plus ? La réponse nous vient d'un statisticien anglais, Francis Anscombe, qui publia en 1973 un petit article appelé à devenir célèbre.
 
 
 ## Quatre jeux de données, des statistiques identiques
 
 
-Anscombe construit quatre ensembles de onze points chacun. Il les choisit de telle sorte qu'ils partagent **exactement les mêmes caractéristiques statistiques** : même moyenne en x, même moyenne en y, même variance, même corrélation, et donc la même droite de régression (y = 3 + 0,5 x). Sur le papier, dans n'importe quel rapport, ces quatre jeux seraient strictement interchangeables.
+Anscombe construit quatre ensembles de onze points chacun. Il les choisit de telle sorte qu'ils partagent **exactement les mêmes caractéristiques statistiques** : même moyenne en x, même moyenne en y, même variance, même corrélation, et donc la même droite de régression (y = 3 + 0,5 x). Sur le papier, pour n'importe quel rapport statistique, ces quatre jeux de données sont interchangeables.
 
 
 
@@ -106,8 +106,7 @@ Et là, tout change. Le premier jeu est ce que la statistique nous laissait imag
 Voilà l'essentiel : **quatre histoires radicalement différentes, parfaitement invisibles dans les chiffres résumés**. Si l'on vous avait remis le seul tableau de statistiques, vous auriez traité ces quatre situations de la même manière. Or elles n'appellent pas du tout les mêmes décisions. Le jeu II vous demande de changer de modèle. Le jeu III vous demande d'aller comprendre cet unique point aberrant — erreur de saisie ? cas particulier riche d'enseignements ? Le jeu IV vous dit que votre belle corrélation ne repose que sur une seule observation, et qu'elle s'effondrera à la prochaine.
 
 
-Un résumé statistique, par construction, jette de l'information pour en garder une version compacte. C'est utile, mais ce n'est jamais neutre : il décide à votre place de ce qui mérite d'être vu. La moyenne d'un service d'urgences qui tourne tranquillement et celle d'un service qui alterne nuits mortes et nuits de crise peuvent être identiques. C'est rarement la moyenne qui vous intéresse.
-
+Un résumé statistique, par construction, jette de l'information pour en garder une version compacte. C'est utile, mais ce n'est jamais neutre : il décide à votre place de ce qui mérite d'être vu.
 
 
 > La moyenne est une opinion sur les données, pas les données.
@@ -116,7 +115,7 @@ Un résumé statistique, par construction, jette de l'information pour en garder
 ## Ce que cela change pour qui décide
 
 
-On retrouve ici, sous une forme imagée, l'idée qui traverse tout mon travail : [le chiffre n'est qu'une conséquence](@root/articles/business-plan-liste-hypotheses.html), et la décision se joue dans ce qu'il y a en dessous. Un KPI sur un tableau de bord, c'est un résumé statistique de plus. Il peut très bien cacher un jeu II, un jeu III ou un jeu IV — une tendance qui s'infléchit, un client qui pèse à lui seul toute la croissance, une moyenne qui réconcilie deux populations opposées.
+On retrouve ici, sous une forme imagée, l'idée qui traverse tout notre travail : [le chiffre n'est qu'une conséquence](@root/articles/business-plan-liste-hypotheses.html), et la décision se joue dans ce qu'il y a en dessous. Un KPI sur un tableau de bord, c'est un résumé statistique de plus. Il peut très bien cacher un jeu II, un jeu III ou un jeu IV — une tendance qui s'infléchit, un client qui pèse à lui seul toute la croissance, une moyenne qui réconcilie deux populations opposées.
 
 
 La parade ne coûte presque rien. Avant de décider sur un chiffre agrégé, **regardez la distribution qu'il résume** : un nuage de points, un histogramme, la série dans le temps. Trente secondes pour vérifier que le chiffre ne ment pas par omission. C'est exactement la discipline que nous appliquons quand nous instruisons un dossier d'investissement ou que nous mettons à plat un portefeuille de projets : ne jamais laisser un indicateur seul tenir lieu de réalité.

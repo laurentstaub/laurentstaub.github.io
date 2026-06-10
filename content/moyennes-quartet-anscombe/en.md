@@ -7,7 +7,7 @@ meta: "Data · Visualization · Decision-making"
 summary: "Four datasets, identical statistics, four opposite realities. The visual proof that a summary number is never enough to decide."
 draft: false
 ---
-There is a question I ask myself at every dashboard I am shown: why bother with a chart at all? After all, a tidy table of statistics — a mean here, a standard deviation there — ought to be enough to form a view. It is a serious objection, and the best answer I know fits in four scatter plots. It comes from an English statistician, Francis Anscombe, who published a short paper in 1973 that went on to become famous.
+Why bother making a chart at all? After all, a well-ordered table of statistics — a mean, a standard deviation, a few other figures — ought to be enough to form a view of a dataset. A picture is worth a thousand words, so they say. But perhaps it is worth more than that? The answer comes from an English statistician, Francis Anscombe, who published a short paper in 1973 that went on to become famous.
 
 
 ## Four datasets, identical statistics
@@ -106,7 +106,7 @@ And everything changes. The first set is what the statistics led us to imagine: 
 Here is the heart of it: **four radically different stories, perfectly invisible in the summary numbers**. Had you been handed the table of statistics alone, you would have treated all four situations the same way. Yet they call for entirely different decisions. Set II tells you to change your model. Set III tells you to go and understand that one outlier — a data-entry error? a special case rich in lessons? Set IV tells you your beautiful correlation rests on a single observation, and that it will collapse with the next one.
 
 
-A statistical summary, by construction, throws away information to keep a compact version of it. That is useful, but it is never neutral: it decides for you what deserves to be seen. The average of an emergency room ticking along calmly and that of a room alternating dead nights with nights of crisis can be identical. The average is rarely what you care about.
+A statistical summary, by construction, throws away information to keep a compact version of it. That is useful, but it is never neutral: it decides for you what deserves to be seen.
 
 
 
