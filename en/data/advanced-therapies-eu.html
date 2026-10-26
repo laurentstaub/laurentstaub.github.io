@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced therapies authorised in the European Union — Antheos Data</title>
+  <meta name="description" content="Complete census of the 33 centralised authorisations for advanced therapy medicinal products since 2009. Stated conventions, public sources, filterable launch review.">
+  <link rel="canonical" href="https://www.antheosdata.com/en/data/advanced-therapies-eu.html">
+  <meta property="og:title" content="Advanced therapies authorised in the European Union">
+  <meta property="og:description" content="Complete census of the 33 centralised authorisations for advanced therapy medicinal products since 2009. Stated conventions, public sources, filterable launch review.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/en/data/advanced-therapies-eu.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Advanced therapies authorised in the European Union">
+  <meta name="twitter:description" content="Complete census of the 33 centralised authorisations for advanced therapy medicinal products since 2009. Stated conventions, public sources, filterable launch review.">
+  <meta name="twitter:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/donnees/therapies-innovantes-ue.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/data/advanced-therapies-eu.html">
+  <link rel="preload" href="../../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../public/stylesheets/style.css?v=20260916-original">
+  <link rel="stylesheet" href="../../public/stylesheets/data-zone.css?v=20260916-original">
+  <link rel="icon" href="../../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Skip to content</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — home">
+        <img id="logo" src="../../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li class="is-active"><a href="../data.html" aria-current="page">Observatory</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Language selection">
+          <a href="../../donnees/therapies-innovantes-ue.html" lang="fr" hreflang="fr">FR</a>
+          <span aria-hidden="true"> · </span>
+          <span class="lang-current">EN</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../data.html" class="back-link">← All datasets</a>
+      <h1>Advanced therapies authorised in the European Union</h1>
+      <p class="article-meta">Dataset · Advanced therapies · European Union</p>
+      <p class="referentiel-stamp">
+        Version 1.0 · census as at 2026-07-27 · one row per centralised marketing authorisation
+      </p>
+
+<p>This dataset lists <strong>every centralised marketing authorisation</strong> granted to an advanced therapy medicinal product in the European Union since 2009.</p>
+<p><strong>33 authorisations granted since 2009, 24 in force, 9 ended, 22 marketed.</strong> By category: 24 gene therapies, 5 somatic cell therapies, 4 tissue-engineered products.</p>
+<div class="data-zone">
+  <div class="dz-head">
+    <h2>Advanced therapies authorised in the European Union</h2>
+    <p class="dz-sub">Thirty-three centralised authorisations, from 2009 to July 2026.</p>
+  </div>
+  <div id="atmp-review" data-lang="en" data-seuil="5" data-total="33">
+      <div class="dz-panel">
+        <p class="dz-panel-title">Filters</p>
+        <div class="dz-controls">
+          <div class="dz-field">
+            <label for="dz-categorie">Category</label>
+            <select id="dz-categorie" data-filtre="categorie"><option value="">All</option><option value="Gene therapy">Gene therapy</option><option value="Somatic cell therapy">Somatic cell therapy</option><option value="Tissue engineering">Tissue engineering</option></select>
+          </div>
+          <div class="dz-field">
+            <label for="dz-etatSel">Status</label>
+            <select id="dz-etatSel" data-filtre="etatSel"><option value="">All</option><option value="Authorisation ended">Authorisation ended</option><option value="Authorised, not marketed">Authorised, not marketed</option><option value="Marketed">Marketed</option><option value="Status not established">Status not established</option></select>
+          </div>
+          <div class="dz-field">
+            <label for="dz-typeAmm">Authorisation type</label>
+            <select id="dz-typeAmm" data-filtre="typeAmm"><option value="">All</option><option value="Conditional">Conditional</option><option value="Exceptional circumstances">Exceptional circumstances</option><option value="Not verified">Not verified</option><option value="Standard">Standard</option></select>
+          </div>
+          <div class="dz-field">
+            <label for="dz-design">Pivotal trial</label>
+            <select id="dz-design" data-filtre="design"><option value="">All</option><option value="Randomised controlled">Randomised controlled</option><option value="Single-arm">Single-arm</option></select>
+          </div>
+          <div class="dz-field">
+            <label>Grant window</label>
+            <div class="dz-segmented" role="group"><button type="button" data-fenetre="0" aria-pressed="true">All</button><button type="button" data-fenetre="2015" aria-pressed="false">Since 2015</button><button type="button" data-fenetre="2020" aria-pressed="false">Since 2020</button><button type="button" data-fenetre="2024" aria-pressed="false">Since 2024</button></div>
+          </div>
+          <div class="dz-field">
+            <label for="dz-q">Search</label>
+            <input type="search" id="dz-q" placeholder="product, substance, holder…">
+          </div>
+          <button type="button" class="dz-reset">Reset</button>
+        </div>
+      </div>
+<div class="dz-frise">
+      <div class="dz-frise-scroll">
+        <svg viewBox="0 0 1000 892" role="img" aria-label="Timeline of the 33 advanced therapy authorisations in the European Union, from 2009 to 2026, grouped by category. Each bar runs from the grant date to the termination of the authorisation or to the census cut-off." font-family="Inter, system-ui, sans-serif">
+          <line x1="148.0" y1="26" x2="148.0" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="148.0" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2009</text>
+          <line x1="236.9" y1="26" x2="236.9" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="236.9" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2011</text>
+          <line x1="325.8" y1="26" x2="325.8" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="325.8" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2013</text>
+          <line x1="414.7" y1="26" x2="414.7" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="414.7" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2015</text>
+          <line x1="503.6" y1="26" x2="503.6" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="503.6" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2017</text>
+          <line x1="592.4" y1="26" x2="592.4" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="592.4" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2019</text>
+          <line x1="681.3" y1="26" x2="681.3" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="681.3" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2021</text>
+          <line x1="770.2" y1="26" x2="770.2" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="770.2" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2023</text>
+          <line x1="859.1" y1="26" x2="859.1" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="859.1" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2025</text>
+          <line x1="948.0" y1="26" x2="948.0" y2="866" stroke="#dbe8d6" stroke-width="1"/>
+          <text x="948.0" y="20" text-anchor="middle" font-size="11" fill="#7d8b9b">2027</text>
+          <text x="0" y="46" font-size="12" font-weight="700" fill="#0a2f16">Gene therapy <tspan font-weight="400" fill="#7d8b9b">(24)</tspan></text>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2012" data-recherche="glybera alipogène tiparvovec uniqure biopharma b.v.">
+          <text x="138" y="83" text-anchor="end" font-size="11.5" fill="#8e949b">Glybera</text>
+          <rect x="317.7" y="74.0" width="222.6" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="536.6" y1="75.4" x2="543.8" y2="82.6"/><line x1="543.8" y1="75.4" x2="536.6" y2="82.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2015" data-recherche="imlygic talimogène laherparepvec amgen europe b.v.">
+          <text x="138" y="105" text-anchor="end" font-size="11.5" fill="#1a2519">Imlygic</text>
+          <rect x="457.3" y="96.0" width="471.7" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 97.5 L936.0 101.0 L931.0 104.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2016" data-recherche="strimvelis fraction cellulaire cd34+ autologue transduite par vecteur rétroviral codant l'ada glaxosmithkline trading services">
+          <text x="138" y="127" text-anchor="end" font-size="11.5" fill="#1a2519">Strimvelis</text>
+          <rect x="477.0" y="118.0" width="452.0" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 119.5 L936.0 123.0 L931.0 126.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2018" data-recherche="yescarta axicabtagène ciloleucel kite pharma eu b.v.">
+          <text x="138" y="149" text-anchor="end" font-size="11.5" fill="#1a2519">Yescarta</text>
+          <rect x="576.7" y="140.0" width="352.3" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 141.5 L936.0 145.0 L931.0 148.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2018" data-recherche="kymriah tisagenlecleucel novartis europharm limited">
+          <text x="138" y="171" text-anchor="end" font-size="11.5" fill="#1a2519">Kymriah</text>
+          <rect x="576.7" y="162.0" width="352.3" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 163.5 L936.0 167.0 L931.0 170.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2018" data-recherche="luxturna vorétigène néparvovec novartis europharm limited">
+          <text x="138" y="193" text-anchor="end" font-size="11.5" fill="#1a2519">Luxturna</text>
+          <rect x="587.7" y="184.0" width="341.3" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 185.5 L936.0 189.0 L931.0 192.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2019" data-recherche="zynteglo bétibéglogène autotemcel bluebird bio (netherlands) b.v.">
+          <text x="138" y="215" text-anchor="end" font-size="11.5" fill="#8e949b">Zynteglo</text>
+          <rect x="610.7" y="206.0" width="125.3" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="732.5" y1="207.4" x2="739.7" y2="214.6"/><line x1="739.7" y1="207.4" x2="732.5" y2="214.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2020" data-recherche="zolgensma onasemnogène abéparvovec avexis eu limited">
+          <text x="138" y="237" text-anchor="end" font-size="11.5" fill="#1a2519">Zolgensma</text>
+          <rect x="653.9" y="228.0" width="275.1" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 229.5 L936.0 233.0 L931.0 236.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2020" data-recherche="tecartus brexucabtagène autoleucel kite pharma eu b.v.">
+          <text x="138" y="259" text-anchor="end" font-size="11.5" fill="#1a2519">Tecartus</text>
+          <rect x="679.3" y="250.0" width="249.7" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 251.5 L936.0 255.0 L931.0 258.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2020" data-recherche="libmeldy atidarsagène autotemcel orchard therapeutics (netherlands) b.v.">
+          <text x="138" y="281" text-anchor="end" font-size="11.5" fill="#1a2519">Libmeldy</text>
+          <rect x="679.7" y="272.0" width="249.3" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 273.5 L936.0 277.0 L931.0 280.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Single-arm" data-annee="2021" data-recherche="skysona élivaldogène autotemcel bluebird bio (netherlands) b.v.">
+          <text x="138" y="303" text-anchor="end" font-size="11.5" fill="#8e949b">Skysona</text>
+          <rect x="705.5" y="294.0" width="15.1" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="716.9" y1="295.4" x2="724.1" y2="302.6"/><line x1="724.1" y1="295.4" x2="716.9" y2="302.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2021" data-recherche="abecma idécabtagène vicleucel bristol-myers squibb pharma eeig">
+          <text x="138" y="325" text-anchor="end" font-size="11.5" fill="#1a2519">Abecma</text>
+          <rect x="709.4" y="316.0" width="219.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 317.5 L936.0 321.0 L931.0 324.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2022" data-recherche="breyanzi lisocabtagène maraleucel bristol-myers squibb pharma eeig">
+          <text x="138" y="347" text-anchor="end" font-size="11.5" fill="#1a2519">Breyanzi</text>
+          <rect x="737.4" y="338.0" width="191.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 339.5 L936.0 343.0 L931.0 346.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2022" data-recherche="carvykti ciltacabtagène autoleucel janssen-cilag international nv">
+          <text x="138" y="369" text-anchor="end" font-size="11.5" fill="#1a2519">Carvykti</text>
+          <rect x="743.6" y="360.0" width="185.4" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 361.5 L936.0 365.0 L931.0 368.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2022" data-recherche="upstaza éladocagène exuparvovec ptc therapeutics international limited">
+          <text x="138" y="391" text-anchor="end" font-size="11.5" fill="#1a2519">Upstaza</text>
+          <rect x="750.2" y="382.0" width="178.9" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 383.5 L936.0 387.0 L931.0 390.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Authorised, not marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2022" data-recherche="roctavian valoctocogène roxaparvovec biomarin international limited">
+          <text x="138" y="413" text-anchor="end" font-size="11.5" fill="#1a2519">Roctavian</text>
+          <rect x="754.6" y="404.0" width="174.4" height="10" rx="3" fill="#efa83c" opacity="0.9"/>
+          <path d="M931.0 405.5 L936.0 409.0 L931.0 412.5" fill="#efa83c" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2023" data-recherche="hemgenix étranacogène dézaparvovec csl behring gmbh">
+          <text x="138" y="435" text-anchor="end" font-size="11.5" fill="#1a2519">Hemgenix</text>
+          <rect x="776.3" y="426.0" width="152.7" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 427.5 L936.0 431.0 L931.0 434.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2024" data-recherche="casgevy exagamglogène autotemcel vertex pharmaceuticals (ireland) limited">
+          <text x="138" y="457" text-anchor="end" font-size="11.5" fill="#1a2519">Casgevy</text>
+          <rect x="819.4" y="448.0" width="109.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 449.5 L936.0 453.0 L931.0 456.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2024" data-recherche="beqvez (ex-durveqtix) fidanacogène élaparvovec pfizer europe ma eeig">
+          <text x="138" y="479" text-anchor="end" font-size="11.5" fill="#8e949b">Beqvez (ex-Durveqtix)</text>
+          <rect x="839.8" y="470.0" width="36.0" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="872.1" y1="471.4" x2="879.3" y2="478.6"/><line x1="879.3" y1="471.4" x2="872.1" y2="478.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2025" data-recherche="vyjuvek bérémagène géperpavec krystal biotech netherlands b.v.">
+          <text x="138" y="501" text-anchor="end" font-size="11.5" fill="#1a2519">Vyjuvek</text>
+          <rect x="873.0" y="492.0" width="56.0" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 493.5 L936.0 497.0 L931.0 500.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2025" data-recherche="aucatzyl obécabtagène autoleucel autolus gmbh">
+          <text x="138" y="523" text-anchor="end" font-size="11.5" fill="#1a2519">Aucatzyl</text>
+          <rect x="883.4" y="514.0" width="45.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 515.5 L936.0 519.0 L931.0 522.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2026" data-recherche="waskyra étuvétidigène autotemcel fondazione telethon ets">
+          <text x="138" y="545" text-anchor="end" font-size="11.5" fill="#1a2519">Waskyra</text>
+          <rect x="904.6" y="536.0" width="24.4" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 537.5 L936.0 541.0 L931.0 544.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2026" data-recherche="adstiladrin nadofaragène firadénovec ferring pharmaceuticals a/s">
+          <text x="138" y="567" text-anchor="end" font-size="11.5" fill="#1a2519">Adstiladrin</text>
+          <rect x="921.7" y="558.0" width="7.3" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 559.5 L936.0 563.0 L931.0 566.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Gene therapy" data-etat="Status not established" data-typeamm="Not verified" data-design="Randomised controlled" data-annee="2026" data-recherche="itvisma onasemnogène abéparvovec (voie intrathécale) novartis europharm limited">
+          <text x="138" y="589" text-anchor="end" font-size="11.5" fill="#8e949b">Itvisma</text>
+          <rect x="925.7" y="580.0" width="3.3" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <path d="M931.0 581.5 L936.0 585.0 L931.0 588.5" fill="#8e949b" opacity="0.85"/>
+          </g>
+          <text x="0" y="608" font-size="12" font-weight="700" fill="#0a2f16">Somatic cell therapy <tspan font-weight="400" fill="#7d8b9b">(5)</tspan></text>
+          <g class="dz-frise-row" data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2013" data-recherche="provenge sipuleucel-t dendreon uk ltd">
+          <text x="138" y="645" text-anchor="end" font-size="11.5" fill="#8e949b">Provenge</text>
+          <rect x="356.1" y="636.0" width="74.1" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="426.6" y1="637.4" x2="433.8" y2="644.6"/><line x1="433.8" y1="637.4" x2="426.6" y2="644.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2016" data-recherche="zalmoxis lymphocytes t allogéniques génétiquement modifiés exprimant δlngfr et hsv-tk mut2 molmed s.p.a.">
+          <text x="138" y="667" text-anchor="end" font-size="11.5" fill="#8e949b">Zalmoxis</text>
+          <rect x="487.2" y="658.0" width="139.7" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="623.3" y1="659.4" x2="630.5" y2="666.6"/><line x1="630.5" y1="659.4" x2="623.3" y2="666.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2018" data-recherche="alofisel darvadstrocel tigenix s.a.u.">
+          <text x="138" y="689" text-anchor="end" font-size="11.5" fill="#8e949b">Alofisel</text>
+          <rect x="558.2" y="680.0" width="298.8" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="853.4" y1="681.4" x2="860.6" y2="688.6"/><line x1="860.6" y1="681.4" x2="853.4" y2="688.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Somatic cell therapy" data-etat="Marketed" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2022" data-recherche="ebvallo tabélécleucel atara biotherapeutics ireland limited">
+          <text x="138" y="711" text-anchor="end" font-size="11.5" fill="#1a2519">Ebvallo</text>
+          <rect x="768.4" y="702.0" width="160.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 703.5 L936.0 707.0 L931.0 710.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Somatic cell therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2025" data-recherche="zemcelpro dorocubicel et cellules cd34- allogéniques de sang de cordon cordex biologics international limited">
+          <text x="138" y="733" text-anchor="end" font-size="11.5" fill="#1a2519">Zemcelpro</text>
+          <rect x="888.0" y="724.0" width="41.0" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 725.5 L936.0 729.0 L931.0 732.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <text x="0" y="752" font-size="12" font-weight="700" fill="#0a2f16">Tissue engineering <tspan font-weight="400" fill="#7d8b9b">(4)</tspan></text>
+          <g class="dz-frise-row" data-categorie="Tissue engineering" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2009" data-recherche="chondrocelect chondrocytes autologues viables caractérisés, expansés ex vivo tigenix n.v.">
+          <text x="138" y="789" text-anchor="end" font-size="11.5" fill="#8e949b">Chondrocelect</text>
+          <rect x="181.9" y="780.0" width="302.9" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="481.2" y1="781.4" x2="488.4" y2="788.6"/><line x1="488.4" y1="781.4" x2="481.2" y2="788.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Tissue engineering" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2013" data-recherche="maci chondrocytes autologues cultivés caractérisés appliqués sur matrice genzyme europe b.v.">
+          <text x="138" y="811" text-anchor="end" font-size="11.5" fill="#8e949b">MACI</text>
+          <rect x="347.5" y="802.0" width="222.8" height="10" rx="3" fill="#8e949b" opacity="0.55"/>
+          <g stroke="#c92a5f" stroke-width="1.8" stroke-linecap="round"><line x1="566.7" y1="803.4" x2="573.9" y2="810.6"/><line x1="573.9" y1="803.4" x2="566.7" y2="810.6"/></g>
+          </g>
+          <g class="dz-frise-row" data-categorie="Tissue engineering" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2015" data-recherche="holoclar cellules épithéliales cornéennes autologues expansées ex vivo contenant des cellules souches chiesi farmaceutici s.p.a.">
+          <text x="138" y="833" text-anchor="end" font-size="11.5" fill="#1a2519">Holoclar</text>
+          <rect x="420.4" y="824.0" width="508.6" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 825.5 L936.0 829.0 L931.0 832.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <g class="dz-frise-row" data-categorie="Tissue engineering" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2017" data-recherche="spherox sphéroïdes de chondrocytes autologues associés à une matrice co.don ag">
+          <text x="138" y="855" text-anchor="end" font-size="11.5" fill="#1a2519">Spherox</text>
+          <rect x="527.0" y="846.0" width="402.0" height="10" rx="3" fill="#5fbd5e" opacity="0.9"/>
+          <path d="M931.0 847.5 L936.0 851.0 L931.0 854.5" fill="#5fbd5e" opacity="0.85"/>
+          </g>
+          <line x1="929.0" y1="26" x2="929.0" y2="866" stroke="#1e3a8a" stroke-width="1.2" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+      <div class="dz-legend">
+        <span class="dz-legend-item"><span class="dz-badge is-dispo"></span><span>Marketed</span></span>
+        <span class="dz-legend-item"><span class="dz-badge is-tension"></span><span>Authorised, not marketed</span></span>
+        <span class="dz-legend-item"><span class="dz-badge is-arret"></span><span>Authorisation ended</span></span>
+        <span class="dz-legend-note">Bar = length of authorisation; cross = termination; arrow = still in force beyond the marker.</span>
+      </div>
+    </div>
+  <div class="dz-review">
+      <div class="dz-summary">
+        <div class="dz-stat" data-stat="Authorisations">
+          <span class="dz-k">Authorisations</span>
+          <div class="dz-v">33 <small>of 33</small></div>
+        </div>
+        <div class="dz-stat" data-stat="Ended">
+          <span class="dz-k">Ended</span>
+          <div class="dz-v">9 <small>27 %</small></div>
+        </div>
+        <div class="dz-stat" data-stat="Median time to termination">
+          <span class="dz-k">Median time to termination</span>
+          <div class="dz-v">38 <small>months</small></div>
+        </div>
+        <div class="dz-stat" data-stat="Median pivotal sample">
+          <span class="dz-k">Median pivotal sample</span>
+          <div class="dz-v">64 <small>patients</small></div>
+        </div>
+        <div class="dz-stat" data-stat="Single-arm trials">
+          <span class="dz-k">Single-arm trials</span>
+          <div class="dz-v">24 <small>73 %</small></div>
+        </div>
+      </div>
+      <div class="dz-legend">
+        <span class="dz-legend-title">Legend</span>
+        <span class="dz-legend-item"><span class="dz-badge is-dispo"></span><span>Marketed</span></span>
+        <span class="dz-legend-item"><span class="dz-badge is-tension"></span><span>Authorised, not marketed</span></span>
+        <span class="dz-legend-item"><span class="dz-badge is-arret"></span><span>Authorisation ended</span></span>
+        <span class="dz-legend-item"><span class="dz-flag">O</span><span>Orphan at authorisation</span></span>
+        <span class="dz-legend-item"><span class="dz-flag">C</span><span>Conditional authorisation</span></span>
+        <span class="dz-legend-item"><span class="dz-flag">E</span><span>Exceptional circumstances</span></span>
+      </div>
+      <div class="dz-tablewrap">
+        <table>
+          <thead><tr><th scope="col" data-col="marque">Product<span class="dz-arrow">↕</span></th><th scope="col" data-col="categorie">Category<span class="dz-arrow">↕</span></th><th scope="col" data-col="dateAmm">Authorised<span class="dz-arrow">↕</span></th><th scope="col" data-col="design">Pivotal trial<span class="dz-arrow">↕</span></th><th scope="col" class="dz-num" data-col="effectifPivot">n<span class="dz-arrow">↕</span></th><th scope="col" data-col="_etat">Status<span class="dz-arrow">↕</span></th><th scope="col" class="dz-num" data-col="dureeMois">Duration<span class="dz-arrow">↕</span></th><th scope="col" data-col="motif">Reason for exit<span class="dz-arrow">↕</span></th></tr></thead>
+          <tbody>
+          <tr data-categorie="Tissue engineering" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2009" data-evenement="1" data-duree="81.8" data-effectif="118" data-brasunique="0" data-recherche="chondrocelect chondrocytes autologues viables caractérisés, expansés ex vivo tigenix n.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/chondrocelect" target="_blank" rel="noopener">Chondrocelect</a></span><span class="dz-dci">Chondrocytes autologues viables caractérisés, expansés ex vivo</span></td>
+            <td><span>Tissue engineering</span></td>
+            <td data-tri="2009-10-05">05/10/2009</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">118</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="81.8">82</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2012" data-evenement="1" data-duree="60.1" data-effectif="27" data-brasunique="1" data-recherche="glybera alipogène tiparvovec uniqure biopharma b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/glybera" target="_blank" rel="noopener">Glybera</a></span><span class="dz-dci">Alipogène tiparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Exceptional circumstances">E</span><span>Gene therapy</span></td>
+            <td data-tri="2012-10-25">25/10/2012</td>
+            <td>Single-arm</td>
+            <td class="dz-num">27</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="60.1">60</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Tissue engineering" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2013" data-evenement="1" data-duree="60.1" data-effectif="144" data-brasunique="0" data-recherche="maci chondrocytes autologues cultivés caractérisés appliqués sur matrice genzyme europe b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/maci" target="_blank" rel="noopener">MACI</a></span><span class="dz-dci">Chondrocytes autologues cultivés caractérisés appliqués sur matrice</span></td>
+            <td><span>Tissue engineering</span></td>
+            <td data-tri="2013-06-27">27/06/2013</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">144</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="60.1">60</td>
+            <td>Manufacturing</td>
+          </tr>
+          <tr data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2013" data-evenement="1" data-duree="19.9" data-effectif="512" data-brasunique="0" data-recherche="provenge sipuleucel-t dendreon uk ltd">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/provenge" target="_blank" rel="noopener">Provenge</a></span><span class="dz-dci">Sipuleucel-T</span></td>
+            <td><span>Somatic cell therapy</span></td>
+            <td data-tri="2013-09-06">06/09/2013</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">512</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="19.9">20</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Tissue engineering" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2015" data-evenement="0" data-duree="137.3" data-effectif="104" data-brasunique="1" data-recherche="holoclar cellules épithéliales cornéennes autologues expansées ex vivo contenant des cellules souches chiesi farmaceutici s.p.a.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/holoclar" target="_blank" rel="noopener">Holoclar</a></span><span class="dz-dci">Cellules épithéliales cornéennes autologues expansées ex vivo contenant des cellules souches</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Tissue engineering</span></td>
+            <td data-tri="2015-02-17">17/02/2015</td>
+            <td>Single-arm</td>
+            <td class="dz-num">104</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="137.3"><span class="dz-censored">≥ 137</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2015" data-evenement="0" data-duree="127.3" data-effectif="436" data-brasunique="0" data-recherche="imlygic talimogène laherparepvec amgen europe b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/imlygic" target="_blank" rel="noopener">Imlygic</a></span><span class="dz-dci">Talimogène laherparepvec</span></td>
+            <td><span>Gene therapy</span></td>
+            <td data-tri="2015-12-16">16/12/2015</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">436</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="127.3"><span class="dz-censored">≥ 127</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2016" data-evenement="0" data-duree="122" data-effectif="12" data-brasunique="1" data-recherche="strimvelis fraction cellulaire cd34+ autologue transduite par vecteur rétroviral codant l'ada glaxosmithkline trading services">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/strimvelis" target="_blank" rel="noopener">Strimvelis</a></span><span class="dz-dci">Fraction cellulaire CD34+ autologue transduite par vecteur rétroviral codant l'ADA</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2016-05-26">26/05/2016</td>
+            <td>Single-arm</td>
+            <td class="dz-num">12</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="122"><span class="dz-censored">≥ 122</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2016" data-evenement="1" data-duree="37.7" data-effectif="30" data-brasunique="1" data-recherche="zalmoxis lymphocytes t allogéniques génétiquement modifiés exprimant δlngfr et hsv-tk mut2 molmed s.p.a.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/zalmoxis" target="_blank" rel="noopener">Zalmoxis</a></span><span class="dz-dci">Lymphocytes T allogéniques génétiquement modifiés exprimant ΔLNGFR et HSV-TK Mut2</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Somatic cell therapy</span></td>
+            <td data-tri="2016-08-18">18/08/2016</td>
+            <td>Single-arm</td>
+            <td class="dz-num">30</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="37.7">38</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Tissue engineering" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2017" data-evenement="0" data-duree="108.6" data-effectif="102" data-brasunique="0" data-recherche="spherox sphéroïdes de chondrocytes autologues associés à une matrice co.don ag">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/spherox" target="_blank" rel="noopener">Spherox</a></span><span class="dz-dci">Sphéroïdes de chondrocytes autologues associés à une matrice</span></td>
+            <td><span>Tissue engineering</span></td>
+            <td data-tri="2017-07-10">10/07/2017</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">102</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="108.6"><span class="dz-censored">≥ 109</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Somatic cell therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2018" data-evenement="1" data-duree="80.7" data-effectif="212" data-brasunique="0" data-recherche="alofisel darvadstrocel tigenix s.a.u.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/alofisel" target="_blank" rel="noopener">Alofisel</a></span><span class="dz-dci">Darvadstrocel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Somatic cell therapy</span></td>
+            <td data-tri="2018-03-23">23/03/2018</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">212</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="80.7">81</td>
+            <td>Efficacy</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2018" data-evenement="0" data-duree="95.1" data-effectif="111" data-brasunique="1" data-recherche="yescarta axicabtagène ciloleucel kite pharma eu b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/yescarta" target="_blank" rel="noopener">Yescarta</a></span><span class="dz-dci">Axicabtagène ciloleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2018-08-23">23/08/2018</td>
+            <td>Single-arm</td>
+            <td class="dz-num">111</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="95.1"><span class="dz-censored">≥ 95</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2018" data-evenement="0" data-duree="95.1" data-effectif="92" data-brasunique="1" data-recherche="kymriah tisagenlecleucel novartis europharm limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/kymriah" target="_blank" rel="noopener">Kymriah</a></span><span class="dz-dci">Tisagenlecleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2018-08-23">23/08/2018</td>
+            <td>Single-arm</td>
+            <td class="dz-num">92</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="95.1"><span class="dz-censored">≥ 95</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2018" data-evenement="0" data-duree="92.1" data-effectif="31" data-brasunique="0" data-recherche="luxturna vorétigène néparvovec novartis europharm limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/luxturna" target="_blank" rel="noopener">Luxturna</a></span><span class="dz-dci">Vorétigène néparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2018-11-22">22/11/2018</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">31</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="92.1"><span class="dz-censored">≥ 92</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2019" data-evenement="1" data-duree="33.8" data-effectif="14" data-brasunique="1" data-recherche="zynteglo bétibéglogène autotemcel bluebird bio (netherlands) b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/zynteglo" target="_blank" rel="noopener">Zynteglo</a></span><span class="dz-dci">Bétibéglogène autotemcel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2019-05-29">29/05/2019</td>
+            <td>Single-arm</td>
+            <td class="dz-num">14</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="33.8">34</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2020" data-evenement="0" data-duree="74.3" data-effectif="22" data-brasunique="1" data-recherche="zolgensma onasemnogène abéparvovec avexis eu limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/zolgensma" target="_blank" rel="noopener">Zolgensma</a></span><span class="dz-dci">Onasemnogène abéparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2020-05-18">18/05/2020</td>
+            <td>Single-arm</td>
+            <td class="dz-num">22</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="74.3"><span class="dz-censored">≥ 74</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2020" data-evenement="0" data-duree="67.4" data-effectif="74" data-brasunique="1" data-recherche="tecartus brexucabtagène autoleucel kite pharma eu b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/tecartus" target="_blank" rel="noopener">Tecartus</a></span><span class="dz-dci">Brexucabtagène autoleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2020-12-14">14/12/2020</td>
+            <td>Single-arm</td>
+            <td class="dz-num">74</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="67.4"><span class="dz-censored">≥ 67</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2020" data-evenement="0" data-duree="67.3" data-effectif="20" data-brasunique="1" data-recherche="libmeldy atidarsagène autotemcel orchard therapeutics (netherlands) b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/libmeldy" target="_blank" rel="noopener">Libmeldy</a></span><span class="dz-dci">Atidarsagène autotemcel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2020-12-17">17/12/2020</td>
+            <td>Single-arm</td>
+            <td class="dz-num">20</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="67.3"><span class="dz-censored">≥ 67</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Standard" data-design="Single-arm" data-annee="2021" data-evenement="1" data-duree="4.1" data-effectif="32" data-brasunique="1" data-recherche="skysona élivaldogène autotemcel bluebird bio (netherlands) b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/skysona" target="_blank" rel="noopener">Skysona</a></span><span class="dz-dci">Élivaldogène autotemcel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2021-07-16">16/07/2021</td>
+            <td>Single-arm</td>
+            <td class="dz-num">32</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="4.1">4</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2021" data-evenement="0" data-duree="59.3" data-effectif="140" data-brasunique="1" data-recherche="abecma idécabtagène vicleucel bristol-myers squibb pharma eeig">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/abecma" target="_blank" rel="noopener">Abecma</a></span><span class="dz-dci">Idécabtagène vicleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2021-08-18">18/08/2021</td>
+            <td>Single-arm</td>
+            <td class="dz-num">140</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="59.3"><span class="dz-censored">≥ 59</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2022" data-evenement="0" data-duree="51.7" data-effectif="" data-brasunique="1" data-recherche="breyanzi lisocabtagène maraleucel bristol-myers squibb pharma eeig">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/breyanzi" target="_blank" rel="noopener">Breyanzi</a></span><span class="dz-dci">Lisocabtagène maraleucel</span></td>
+            <td><span>Gene therapy</span></td>
+            <td data-tri="2022-04-04">04/04/2022</td>
+            <td>Single-arm</td>
+            <td class="dz-num">—</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="51.7"><span class="dz-censored">≥ 52</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2022" data-evenement="0" data-duree="50.1" data-effectif="113" data-brasunique="1" data-recherche="carvykti ciltacabtagène autoleucel janssen-cilag international nv">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/carvykti" target="_blank" rel="noopener">Carvykti</a></span><span class="dz-dci">Ciltacabtagène autoleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2022-05-25">25/05/2022</td>
+            <td>Single-arm</td>
+            <td class="dz-num">113</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="50.1"><span class="dz-censored">≥ 50</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2022" data-evenement="0" data-duree="48.3" data-effectif="28" data-brasunique="1" data-recherche="upstaza éladocagène exuparvovec ptc therapeutics international limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/upstaza" target="_blank" rel="noopener">Upstaza</a></span><span class="dz-dci">Éladocagène exuparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Exceptional circumstances">E</span><span>Gene therapy</span></td>
+            <td data-tri="2022-07-18">18/07/2022</td>
+            <td>Single-arm</td>
+            <td class="dz-num">28</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="48.3"><span class="dz-censored">≥ 48</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Authorised, not marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2022" data-evenement="0" data-duree="47.1" data-effectif="134" data-brasunique="1" data-recherche="roctavian valoctocogène roxaparvovec biomarin international limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/roctavian" target="_blank" rel="noopener">Roctavian</a></span><span class="dz-dci">Valoctocogène roxaparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2022-08-24">24/08/2022</td>
+            <td>Single-arm</td>
+            <td class="dz-num">134</td>
+            <td data-tri="2"><span class="dz-badge is-tension">Authorised, not marketed</span></td>
+            <td class="dz-num" data-tri="47.1"><span class="dz-censored">≥ 47</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Somatic cell therapy" data-etat="Marketed" data-typeamm="Exceptional circumstances" data-design="Single-arm" data-annee="2022" data-evenement="0" data-duree="43.3" data-effectif="43" data-brasunique="1" data-recherche="ebvallo tabélécleucel atara biotherapeutics ireland limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/ebvallo" target="_blank" rel="noopener">Ebvallo</a></span><span class="dz-dci">Tabélécleucel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Exceptional circumstances">E</span><span>Somatic cell therapy</span></td>
+            <td data-tri="2022-12-16">16/12/2022</td>
+            <td>Single-arm</td>
+            <td class="dz-num">43</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="43.3"><span class="dz-censored">≥ 43</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2023" data-evenement="0" data-duree="41.2" data-effectif="54" data-brasunique="1" data-recherche="hemgenix étranacogène dézaparvovec csl behring gmbh">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/hemgenix" target="_blank" rel="noopener">Hemgenix</a></span><span class="dz-dci">Étranacogène dézaparvovec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2023-02-20">20/02/2023</td>
+            <td>Single-arm</td>
+            <td class="dz-num">54</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="41.2"><span class="dz-censored">≥ 41</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2024" data-evenement="0" data-duree="29.5" data-effectif="42" data-brasunique="1" data-recherche="casgevy exagamglogène autotemcel vertex pharmaceuticals (ireland) limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/casgevy" target="_blank" rel="noopener">Casgevy</a></span><span class="dz-dci">Exagamglogène autotemcel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2024-02-09">09/02/2024</td>
+            <td>Single-arm</td>
+            <td class="dz-num">42</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="29.5"><span class="dz-censored">≥ 30</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Authorisation ended" data-typeamm="Conditional" data-design="Single-arm" data-annee="2024" data-evenement="1" data-duree="9.7" data-effectif="45" data-brasunique="1" data-recherche="beqvez (ex-durveqtix) fidanacogène élaparvovec pfizer europe ma eeig">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/beqvez" target="_blank" rel="noopener">Beqvez (ex-Durveqtix)</a></span><span class="dz-dci">Fidanacogène élaparvovec</span></td>
+            <td><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2024-07-24">24/07/2024</td>
+            <td>Single-arm</td>
+            <td class="dz-num">45</td>
+            <td data-tri="3"><span class="dz-badge is-arret">Authorisation ended</span></td>
+            <td class="dz-num" data-tri="9.7">10</td>
+            <td>Commercial</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Randomised controlled" data-annee="2025" data-evenement="0" data-duree="15.1" data-effectif="31" data-brasunique="0" data-recherche="vyjuvek bérémagène géperpavec krystal biotech netherlands b.v.">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/vyjuvek" target="_blank" rel="noopener">Vyjuvek</a></span><span class="dz-dci">Bérémagène géperpavec</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2025-04-23">23/04/2025</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">31</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="15.1"><span class="dz-censored">≥ 15</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2025" data-evenement="0" data-duree="12.3" data-effectif="94" data-brasunique="1" data-recherche="aucatzyl obécabtagène autoleucel autolus gmbh">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/aucatzyl" target="_blank" rel="noopener">Aucatzyl</a></span><span class="dz-dci">Obécabtagène autoleucel</span></td>
+            <td><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2025-07-17">17/07/2025</td>
+            <td>Single-arm</td>
+            <td class="dz-num">94</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="12.3"><span class="dz-censored">≥ 12</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Somatic cell therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2025" data-evenement="0" data-duree="11" data-effectif="25" data-brasunique="1" data-recherche="zemcelpro dorocubicel et cellules cd34- allogéniques de sang de cordon cordex biologics international limited">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/zemcelpro" target="_blank" rel="noopener">Zemcelpro</a></span><span class="dz-dci">Dorocubicel et cellules CD34- allogéniques de sang de cordon</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span class="dz-flag" title="Conditional authorisation">C</span><span>Somatic cell therapy</span></td>
+            <td data-tri="2025-08-25">25/08/2025</td>
+            <td>Single-arm</td>
+            <td class="dz-num">25</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="11"><span class="dz-censored">≥ 11</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Standard" data-design="Single-arm" data-annee="2026" data-evenement="0" data-duree="6.5" data-effectif="10" data-brasunique="1" data-recherche="waskyra étuvétidigène autotemcel fondazione telethon ets">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/waskyra" target="_blank" rel="noopener">Waskyra</a></span><span class="dz-dci">Étuvétidigène autotemcel</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2026-01-09">09/01/2026</td>
+            <td>Single-arm</td>
+            <td class="dz-num">10</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="6.5"><span class="dz-censored">≥ 7</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Marketed" data-typeamm="Conditional" data-design="Single-arm" data-annee="2026" data-evenement="0" data-duree="2" data-effectif="103" data-brasunique="1" data-recherche="adstiladrin nadofaragène firadénovec ferring pharmaceuticals a/s">
+            <td><span class="dz-brand"><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/adstiladrin" target="_blank" rel="noopener">Adstiladrin</a></span><span class="dz-dci">Nadofaragène firadénovec</span></td>
+            <td><span class="dz-flag" title="Conditional authorisation">C</span><span>Gene therapy</span></td>
+            <td data-tri="2026-05-28">28/05/2026</td>
+            <td>Single-arm</td>
+            <td class="dz-num">103</td>
+            <td data-tri="1"><span class="dz-badge is-dispo">Marketed</span></td>
+            <td class="dz-num" data-tri="2"><span class="dz-censored">≥ 2</span></td>
+            <td>—</td>
+          </tr>
+          <tr data-categorie="Gene therapy" data-etat="Status not established" data-typeamm="Not verified" data-design="Randomised controlled" data-annee="2026" data-evenement="0" data-duree="0.9" data-effectif="126" data-brasunique="0" data-recherche="itvisma onasemnogène abéparvovec (voie intrathécale) novartis europharm limited">
+            <td><span class="dz-brand"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ%3AC_202603946" target="_blank" rel="noopener">Itvisma</a></span><span class="dz-dci">Onasemnogène abéparvovec (voie intrathécale)</span></td>
+            <td><span class="dz-flag" title="Orphan at authorisation">O</span><span>Gene therapy</span></td>
+            <td data-tri="2026-06-30">30/06/2026</td>
+            <td>Randomised controlled</td>
+            <td class="dz-num">126</td>
+            <td data-tri="4"><span class="dz-badge is-arret">Status not established</span></td>
+            <td class="dz-num" data-tri="0.9"><span class="dz-censored">≥ 1</span></td>
+            <td>—</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dz-notes">
+        <p>Durations prefixed with ≥ are right-censored: the authorisation is still in force, so the observed duration is a minimum. These observations are excluded from the median time to termination, which covers observed exits only.</p>
+        <p>Below 5 observations, derived statistics are hidden: on so thin a sample, the named case is worth more than the average.</p>
+        <p>European Medicines Agency — European public assessment reports, register of authorisations, public withdrawal statements; European Commission union register; Official Journal of the European Union.</p>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<h2 id="section-1">Counting conventions</h2>
+<p>A count with no stated convention means nothing. Those used here:</p>
+<ul>
+<li><strong>Unit</strong>: the authorisation. Zolgensma and Itvisma share a substance but count as two; Durveqtix and Beqvez are one renamed authorisation and count as one.</li>
+<li><strong>Authorised is not marketed</strong>: the Status column distinguishes the two, and only 22 products are actually marketed.</li>
+</ul>
+<p><strong>External consistency check.</strong> The 27 authorisations dated before 30 November 2024 correspond exactly to the count published by <em>Frontiers in Medicine</em> at that same date, withdrawals included.</p>
+<h2 id="section-2">Derived parameters</h2>
+<p>Of the nine observed exits: seven for commercial reasons, one for efficacy (Alofisel), one for manufacturing (MACI). Median time between grant and termination: 38 months, from 4 months (Skysona) to 82 months (Chondrocelect).</p>
+<p>The crude 27 % exit rate is neither a five-year nor a seven-year risk: it mixes very unequal follow-up times. The Kaplan-Meier estimate gives <strong>18 % at five years and 45 % at seven years</strong> (confidence interval 30 to 79 % at 82 months). Median survival is not reached. Numbers at risk: 33 at origin, 24 at 24 months, 18 at 48 months, 10 at 72 months, 4 at 96 months. Cumulative incidence by cause: commercial 18.1 % at 5 years and 31.8 % at 7 years; efficacy 7.8 %; manufacturing 5.8 %.</p>
+<p>Across the 33 authorisations: 24 rest on a single-arm pivotal trial, for a median pivotal sample of 64 patients; 14 are conditional and 3 fall under exceptional circumstances.</p>
+<h2 id="section-3">Method and sources</h2>
+<p>Every row is established against: the product&#39;s European public assessment report, the register of authorisations, the Agency&#39;s public withdrawal statements, the decisions published in the Commission&#39;s union register and, for the most recent authorisation, the <em>Official Journal of the European Union</em>. The advanced therapy sub-category comes from the Committee&#39;s quarterly report, the only source that states it for all products.</p>
+<h3>Residual uncertainties</h3>
+<p>Fields that verification could not establish are flagged as such in the census file. They concern mainly <strong>Itvisma</strong>, whose assessment report is not yet published — authorisation type and pivotal data to be re-checked on publication; the exact pivotal sample of <strong>Breyanzi</strong>, not publicly established; the formal designation of the <strong>Spherox</strong> pivotal trial; and the sample size of <strong>Zemcelpro</strong>, given as 25 in the public summary and 36 in the assessment report.</p>
+<h3>Change log</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>2026-07-27</td>
+<td>Initial publication.</td>
+</tr>
+</tbody></table>
+
+
+      <a href="../data.html" class="back-link">← All datasets</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Business plans, manufacturing costs, pricing and due diligence for the
+          pharmaceutical industry.
+        </p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../data.html">Observatory</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://medipile.fr">Médipile</a></li>
+          <li><a href="https://app.antheosdata.com">Shortage tracker</a></li>
+          <li><a href="../legal.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — Paris Trade Register 948 306 865 · 59 rue de Ponthieu, Office 326, 75008 Paris, France</span>
+    </div>
+  </footer>
+
+  <script src="../../public/scripts/atmp-review.js" defer></script>
+</body>
+</html>

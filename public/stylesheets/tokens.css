@@ -1,0 +1,99 @@
+/* tokens.css — Antheos Data
+ * Les valeurs de couleur et de police sont à confirmer sur le site réel.
+ * Les valeurs structurelles (radius, échelle, filets) sont des contraintes : ne pas les assouplir.
+ */
+
+:root {
+  /* Couleurs — À CONFIRMER sur antheosdata.com */
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #d8d8d8;
+  --bg: #ffffff;
+  --bg-alt: #f7f7f5;
+  --accent: #1f4e5f;        /* couleur d'accent UNIQUE */
+  --accent-soft: #9db4bc;
+  --neutral: #bfbfbf;       /* séries non mises en avant */
+
+  /* Typographie — À CONFIRMER */
+  --font-head: Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Échelle typographique — ratio 1.333 depuis 16px. Contrainte. */
+  --fs-xs: 0.75rem;    /* 12px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-md: 1.333rem;   /* 21px */
+  --fs-lg: 1.777rem;   /* 28px */
+  --fs-xl: 2.369rem;   /* 38px */
+  --fs-2xl: 3.157rem;  /* 51px */
+
+  /* Espacement — unité 8px. Contrainte. */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-6: 3rem;
+  --sp-8: 4rem;
+
+  /* Structure — contraintes, ne pas modifier */
+  --radius: 0;              /* angles droits */
+  --radius-control: 2px;    /* seule exception : contrôles de formulaire */
+  --rule-width: 1px;
+  --measure: 68ch;          /* largeur de colonne de lecture */
+  --bar-thickness: 0.7;     /* part de l'espace occupée par une barre */
+}
+
+/* Angles droits par défaut, partout. */
+*, *::before, *::after { border-radius: var(--radius); }
+input, select, textarea, button { border-radius: var(--radius-control); }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; }
+h1 { font-size: var(--fs-xl); }
+h2 { font-size: var(--fs-lg); }
+h3 { font-size: var(--fs-md); }
+
+p, li { max-width: var(--measure); }
+
+/* Tableaux : filets horizontaux uniquement, pas de fond alterné. */
+table { border-collapse: collapse; width: 100%; font-size: var(--fs-sm); }
+th, td {
+  text-align: left;
+  padding: var(--sp-1) var(--sp-2);
+  border: none;
+  border-bottom: var(--rule-width) solid var(--rule);
+}
+th { font-weight: 600; color: var(--muted); }
+tbody tr:nth-child(even) { background: transparent; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Métadonnées de page : une seule occurrence, sous le titre. */
+.page-meta {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-block: calc(-1 * var(--sp-1)) var(--sp-4);
+}
+
+/* Filtres : toujours au-dessus de l'objet piloté. */
+.filters {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: end;
+  padding-block: var(--sp-2);
+  border-bottom: var(--rule-width) solid var(--rule);
+  margin-bottom: var(--sp-3);
+}
+.filters label { font-size: var(--fs-xs); color: var(--muted); display: block; }
+
+/* Chiffre-clé. L'unité fait partie du markup, jamais implicite. */
+.stat { font-family: var(--font-head); font-size: var(--fs-2xl); color: var(--accent); }
+.stat .unit { font-size: var(--fs-md); color: var(--muted); margin-left: 0.15em; }
+.stat + .stat-label { font-size: var(--fs-sm); color: var(--muted); }

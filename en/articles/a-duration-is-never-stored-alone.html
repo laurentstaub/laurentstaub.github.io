@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A duration is never stored alone — Antheos Data</title>
+  <meta name="description" content="Dead at sixty months, alive at sixty months: same number, opposite meaning. Why a duration without an event indicator is not data, and what Kaplan-Meier repairs.">
+  <link rel="canonical" href="https://www.antheosdata.com/en/articles/a-duration-is-never-stored-alone.html">
+  <meta property="og:title" content="A duration is never stored alone">
+  <meta property="og:description" content="Dead at sixty months, alive at sixty months: same number, opposite meaning. Why a duration without an event indicator is not data, and what Kaplan-Meier repairs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/en/articles/a-duration-is-never-stored-alone.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A duration is never stored alone">
+  <meta name="twitter:description" content="Dead at sixty months, alive at sixty months: same number, opposite meaning. Why a duration without an event indicator is not data, and what Kaplan-Meier repairs.">
+  <meta name="twitter:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/une-duree-ne-se-stocke-jamais-seule.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/a-duration-is-never-stored-alone.html">
+  <link rel="preload" href="../../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../public/stylesheets/style.css?v=20260916-original">
+  <link rel="icon" href="../../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Skip to content</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — home">
+        <img id="logo" src="../../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../data.html">Observatory</a></li>
+          <li class="is-active"><a href="../insights.html" aria-current="page">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Language selection">
+          <a href="../../articles/une-duree-ne-se-stocke-jamais-seule.html" lang="fr" hreflang="fr">FR</a>
+          <span aria-hidden="true"> · </span>
+          <span class="lang-current">EN</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../insights.html" class="back-link">← All articles</a>
+      <h1>A duration is never stored alone</h1>
+      <p class="article-meta">Durations · Right-censoring · Kaplan-Meier · <time datetime="2026-08-15">15 August 2026</time></p>
+      <details class="article-tools"><summary>In this article</summary><ol><li><a href="#section-1">A duration on its own is not data</a></li><li><a href="#section-2">Three ways to compute, three answers</a></li><li><a href="#section-3">Two men who did not want to write together</a></li><li><a href="#section-4">What Kaplan-Meier does</a></li><li><a href="#section-5">The bias does not always run the same way</a></li><li><a href="#section-6">Where this applies, beyond medicine</a></li></ol></details>
+
+<p>Two rows in a spreadsheet. Glybera, sixty months. Abecma, fifty-nine months.</p>
+<p>The first is a European authorisation that has ended: the product lived sixty months, then stopped. The second is an authorisation still in force, whose product is still selling after fifty-nine months. If your file holds nothing but the name and the duration, <strong>those two rows are indistinguishable</strong>. They carry almost the same number, and that number means the opposite thing.</p>
+<p>That is the subject of this article, and it reaches far beyond pharmacy: everywhere delays are measured — the life of a project, time to hire, time to payment, time to cancellation — the same error repeats, and it is almost always invisible.</p>
+<h2 id="section-1">A duration on its own is not data</h2>
+<p>The problem fits in one sentence: <em>sixty months</em> does not say whether the story is over.</p>
+<p>For Glybera, the observation is complete. We saw the beginning, we saw the end, the duration is the lifetime. For Abecma, the observation is <strong>interrupted by our own calendar</strong>: the product is still there at the moment we stop counting. Its lifetime is not fifty-nine months — it is <em>at least</em> fifty-nine months. How much more, we do not know.</p>
+<p>Statisticians call this <strong>right-censoring</strong>, and the term is well chosen: something has been cut off to the right of the observation. A censored duration is not a noisy or approximate value. It is a value we know only to be greater than what we saw.</p>
+<p>Hence the rule, which belongs in any database that stores delays: <strong>a duration is never stored alone</strong>. It always travels with two companions — a cut-off date, saying how far the subject was followed, and an event indicator, saying whether the end occurred or the observation simply stopped. Two columns instead of one. Without them the file is ambiguous, and no computation will rescue it.</p>
+<blockquote>
+<p>A project alive for twenty months does not have a lifetime. It has a minimum duration.</p>
+</blockquote>
+<h2 id="section-2">Three ways to compute, three answers</h2>
+<p>Take the real case. Thirty-three European authorisations for advanced therapies, granted since 2009; nine have ended, twenty-four are still in force. An ordinary question: how long do these products last?</p>
+<p><strong>First method, the most common.</strong> Put every duration in one column and take the median. Result: fifty months. The calculation is wrong from its first term, because it treats Abecma&#39;s fifty-nine months as a completed life when it is a floor. Every living product drags the result down by an unknown amount. Fifty months is an <strong>underestimate</strong>, and we cannot say by how much.</p>
+<p><strong>Second method, seemingly the more cautious.</strong> Keep only the completed cases — the nine exits — and take their median: thirty-eight months. The calculation is exact, but it no longer answers the question asked. It answers: <em>among those that died, at what age did they die?</em> And it is structurally pulled downward, because the slow deaths have not had time to happen. A product that will stop at a hundred and twenty months is today filed, wrongly, among the living.</p>
+<p>Those two methods share one flaw, and it is not being means or medians: it is behaving as though censoring did not exist. The first denies it, treating the living as dead; the second discards it, throwing the living away. Both are dragged downward, and in both cases we cannot say by how much. What we need is a method that throws nobody away, and makes a living product say only what it actually knows.</p>
+<p><strong>Third method.</strong> Kaplan-Meier. And here, alas, no hard number appears: across the whole observed period more than half the authorisations are still alive, so we cannot say at what age half of them end, since that moment has not yet arrived.</p>
+<p>The method does not fall silent for all that. It refuses the single figure and gives something else: a curve, and values at horizons we choose. <strong>18 % terminations at five years, 45 % at seven.</strong> Those are the values that go into a valuation model, not a median.</p>
+<p>Fifty months, thirty-eight months, or no median at all. Three results, one dataset, thirty-three rows. The third is the only honest one — and it is honest precisely because it refuses to summarise a curve with a number when the curve does not lend itself to it.</p>
+<h2 id="section-3">Two men who did not want to write together</h2>
+<p>The method does not come from project management. It comes from the gravest question one can put to data: <em>does this treatment let patients live longer?</em></p>
+<p>The problem had long been known to actuaries and physicians. To know whether a treatment prolongs life you must follow patients — but the study stops on a date, some patients move away, others stop coming, and you end up with a population only part of which has a complete history. Discarding them means discarding the survivors, that is, precisely those in whom the treatment may have worked.</p>
+<p>Two men took it on in the early 1950s. They had the same doctoral advisor at Princeton, John Tukey, and they were not working together.</p>
+<p>In 1952 <strong>Paul Meier</strong>, at Johns Hopkins, came across a paper by Greenwood on the duration of cancer. A year later <strong>Edward Kaplan</strong>, at Bell Telephone Laboratories, became interested in something else entirely: the lifetime of vacuum tubes in the repeaters of telephone cables lying on the ocean floor. Patients on one side, electronic components at the bottom of the Atlantic on the other — and exactly the same mathematical problem, because in neither case can you wait for everything to die before concluding.</p>
+<p>Kaplan showed his manuscript to Tukey, who told him Meier was already on the question and that his text was circulating in the laboratory. Both manuscripts went to the <em>Journal of the American Statistical Association</em>, which declined to publish the same idea twice and recommended a joint paper.</p>
+<p>That is where the quarrel began. Kaplan summed it up thirty years later in a remarkably dry sentence: &quot;<strong>Much correspondence over four years was required to reconcile our differing approaches, and we were concerned that meanwhile someone else might publish the idea.</strong>&quot; The fear was well founded: at that very moment Berkson and Gage, at the Mayo Clinic, were running into the limits of actuarial estimates and looking for a way out.</p>
+<p>What exactly were they stuck on? Authorship as much as method. Kaplan had submitted first; Meier held that his own contribution went beyond the estimator — he had worked on the bias of estimates and on means — and wanted to publish a second paper. Asked about it fifty years later, he did not mince words: &quot;<strong>Well, I got pretty mad and I called John.</strong>&quot; He wrote to the editor, who replied that readers would not appreciate seeing the thing cut in two. In 2004 Meier still found it hard to fully acknowledge Kaplan&#39;s contribution. As for the two original manuscripts, nobody has ever managed to find them.</p>
+<p>The paper finally appeared in 1958 under both names, and became one of the most cited in all of scientific literature. A further irony: Kaplan had developed his part for explicitly non-biological purposes, and it took until 1969 and Gehan&#39;s work at MD Anderson for the method to properly enter the medical literature — which it has never left since.</p>
+<p>Four years of correspondence between two authors who did not want to write together, under pressure from an unseen competitor, for a method that today serves equally to evaluate a chemotherapy and to measure subscription churn. Worth recalling when you think you are dealing with a mere formula.</p>
+<h2 id="section-4">What Kaplan-Meier does</h2>
+<p>The method is simpler than its name suggests, because all it does is count.</p>
+<p>It looks at the first moment something dies. At that precise instant it asks: <em>how many subjects were still under observation, and how many died?</em> Skysona ends at four months; thirty-one products were then observable; one died. Survival therefore drops to 30/31, that is 96.8 %. Then it moves to the next death and starts again, on the population <strong>still observable at that instant</strong>. And so on, multiplying the probabilities of surviving each step.</p>
+<p>The trick lies in how the living are handled. A product still in force does not vanish from the calculation: it counts fully in the population at risk <strong>for as long as we observe it</strong>, then quietly leaves without ever being counted as a death. It has said everything it knew — &quot;I lasted at least this long&quot; — without being made to say what it does not know.</p>
+<p>That is why the curve descends in steps, and why the steps grow taller to the right: as the observable population shrinks, each death weighs more.</p>
+<figure>
+  <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kaplan-Meier survival curve for the 33 European advanced therapy authorisations. Survival steps down from 100% to about 55 % over 82 months, with a confidence interval that widens sharply to the right as the numbers at risk fall. Numbers at risk below the axis go from 33 at origin to 4 at 96 months.">
+    <!-- grid -->
+    <g stroke="#dbe8d6" stroke-width="1">
+      <line x1="64" y1="28"  x2="648" y2="28"/>
+      <line x1="64" y1="97"  x2="648" y2="97"/>
+      <line x1="64" y1="167" x2="648" y2="167"/>
+      <line x1="64" y1="236" x2="648" y2="236"/>
+      <line x1="64" y1="306" x2="648" y2="306"/>
+    </g>
+    <!-- 95 % confidence interval -->
+    <polygon points="64.0,28.0 84.0,28.0 84.0,29.3 111.2,29.3 111.2,32.7 160.8,32.7 160.8,37.5 228.5,37.5 228.5,43.4 247.5,43.4 247.5,50.0 356.5,50.0 356.5,69.5 456.7,69.5 456.7,82.8 462.1,82.8 462.1,97.9 648.0,97.9 648.0,227.5 462.1,227.5 462.1,205.1 456.7,205.1 456.7,177.9 356.5,177.9 356.5,134.6 247.5,134.6 247.5,121.7 228.5,121.7 228.5,107.9 160.8,107.9 160.8,94.1 111.2,94.1 111.2,85.7 84.0,85.7 84.0,28.0"
+             fill="#7ed957" opacity="0.16"/>
+    <!-- survival curve -->
+    <polyline points="64.0,28.0 84.0,28.0 84.0,37.0 111.2,37.0 111.2,46.2 160.8,46.2 160.8,56.6 228.5,56.6 228.5,67.5 247.5,67.5 247.5,78.3 356.5,78.3 356.5,110.8 456.7,110.8 456.7,132.5 462.1,132.5 462.1,154.2 648.0,154.2"
+              fill="none" stroke="#0b4912" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- censoring ticks: each mark is an authorisation still in force -->
+    <g stroke="#4caf5e" stroke-width="1.6">
+      <line x1="68.4" y1="23" x2="68.4" y2="33"/>   <line x1="73.7" y1="23" x2="73.7" y2="33"/>
+      <line x1="95.6" y1="32" x2="95.6" y2="42"/>   <line x1="117.5" y1="41" x2="117.5" y2="51"/>
+      <line x1="123.9" y1="41" x2="123.9" y2="51"/> <line x1="137.5" y1="41" x2="137.5" y2="51"/>
+      <line x1="207.6" y1="52" x2="207.6" y2="62"/> <line x1="264.5" y1="73" x2="264.5" y2="83"/>
+      <line x1="274.7" y1="73" x2="274.7" y2="83"/> <line x1="293.2" y1="73" x2="293.2" y2="83"/>
+      <line x1="299.1" y1="73" x2="299.1" y2="83"/> <line x1="307.8" y1="73" x2="307.8" y2="83"/>
+      <line x1="315.6" y1="73" x2="315.6" y2="83"/> <line x1="352.6" y1="73" x2="352.6" y2="83"/>
+      <line x1="391.5" y1="106" x2="391.5" y2="116"/> <line x1="392.0" y1="106" x2="392.0" y2="116"/>
+      <line x1="425.6" y1="106" x2="425.6" y2="116"/> <line x1="512.2" y1="149" x2="512.2" y2="159"/>
+      <line x1="526.8" y1="149" x2="526.8" y2="159"/> <line x1="592.5" y1="149" x2="592.5" y2="159"/>
+    </g>
+    <!-- axes -->
+    <g stroke="#56684f" stroke-width="1.4">
+      <line x1="64" y1="28" x2="64" y2="306"/>
+      <line x1="64" y1="306" x2="648" y2="306"/>
+    </g>
+    <!-- y ticks -->
+    <g font-size="12" fill="#56684f" text-anchor="end" font-family="Inter, system-ui, sans-serif">
+      <text x="56" y="32">100%</text>
+      <text x="56" y="101">75%</text>
+      <text x="56" y="171">50%</text>
+      <text x="56" y="240">25%</text>
+      <text x="56" y="310">0%</text>
+    </g>
+    <!-- x ticks -->
+    <g font-size="12" fill="#56684f" text-anchor="middle" font-family="Inter, system-ui, sans-serif">
+      <text x="64" y="324">0</text>
+      <text x="181" y="324">24</text>
+      <text x="298" y="324">48</text>
+      <text x="414" y="324">72</text>
+      <text x="531" y="324">96</text>
+      <text x="648" y="324">120</text>
+      <text x="356" y="344" font-size="12.5">months since authorisation granted</text>
+    </g>
+    <!-- numbers at risk, below the axis -->
+    <g font-size="12" fill="#56684f" font-family="Inter, system-ui, sans-serif">
+      <text x="64" y="372" font-size="11" text-anchor="start" font-weight="600">Numbers at risk</text>
+      <g text-anchor="middle" font-variant-numeric="tabular-nums">
+        <text x="64" y="390">33</text>
+        <text x="181" y="390">24</text>
+        <text x="298" y="390">18</text>
+        <text x="414" y="390">10</text>
+        <text x="531" y="390">4</text>
+        <text x="648" y="390">3</text>
+      </g>
+    </g>
+  </svg>
+  <figcaption>Survival of the 33 European advanced therapy authorisations, Kaplan-Meier estimate. The pale band is the 95% confidence interval; the small vertical ticks mark authorisations still in force, right-censored. Census as at 27 July 2026.</figcaption>
+</figure>
+
+<p>Two things can be read off this drawing, and neither can be read off an average.</p>
+<p>The first: <strong>uncertainty is not constant</strong>. On the left the confidence band is narrow — thirty-three products observed, the estimate is solid. On the right it fans open: at eighty-two months the risk of termination is estimated at 45 %, but the interval runs from 30 to 79 %. That is not a flaw in the method, it is a confession. Only four products have been followed that long, and four products do not allow precision.</p>
+<p>The second: the numbers below the axis tell the true story of the dataset. Thirty-three at origin, ten at six years, four at eight years. Any claim about the long run rests on a handful of observations. Publishing those numbers stops the reader — and yourself — from making the curve say more than it knows.</p>
+<p>One condition, finally, without which none of this holds. Kaplan-Meier assumes that <strong>censoring says nothing about prognosis</strong>: ceasing to observe a subject must be unrelated to its state. Here that is true by construction, since the censoring comes solely from the cut-off date — the twenty-four live authorisations did not remove themselves from the count, we stopped counting on 27 July 2026. When subjects disappear for other reasons, the estimate turns optimistic with nothing to flag it; <a href="../../en/articles/overall-progression-free-disease-free-survival.html">I come back to this in the clinical trial setting</a>, where the problem bites far harder.</p>
+<h2 id="section-5">The bias does not always run the same way</h2>
+<p>A point often neglected, and it reverses the reading entirely.</p>
+<p>When the measured event is <strong>feared</strong> — a product that stops, a customer who cancels — ignoring censoring yields durations that are too short. We believe things die quickly, when in fact we simply stopped watching too early. The picture looks darker than it is.</p>
+<p>When the event is <strong>wanted</strong> — obtaining reimbursement, reaching peak sales, securing an indication extension — the same neglect produces the opposite effect, and a far more dangerous one. The average delay is computed on successful cases alone, forgetting every case that never succeeded. &quot;We obtain reimbursement in fourteen months on average&quot; can coexist perfectly with a third of files that never get there. The figure is exact and the conclusion false — and this time, it reassures.</p>
+<p>Which is why I am particularly wary of average delays that please.</p>
+<h2 id="section-6">Where this applies, beyond medicine</h2>
+<p>Everywhere a population is followed over unequal durations, which is to say very nearly everywhere.</p>
+<p>The lifetime of a project in a portfolio — ongoing projects are censored, and they are usually the majority. Time to reimbursement for an innovation. A patient&#39;s persistence on treatment. Time to fill a vacancy, where unfilled posts quietly drop out of the statistics. Subscription churn, where the customers still active are precisely the ones we cannot yet count. Invoice payment time, where unpaid invoices are excluded from the average because they have no payment date.</p>
+<p>And of course, where the method was born: clinical trials. With one further difficulty this article has set aside — in medicine one does not measure <em>survival</em>, but one of the possible endpoints. Overall survival, progression-free survival, disease-free survival: same patients, same dates, different curves. Choosing the endpoint is a subject in itself, and <a href="../../en/articles/overall-progression-free-disease-free-survival.html">I devote another article to it</a>.</p>
+<p>In each case the correction costs almost nothing: two columns instead of one, and an estimator that fits in a spreadsheet function or ten lines of code. What costs dearly is not having done it, and building a plan on top.</p>
+<p>So next time you are given an average delay, do not only ask how long. Ask: <strong>how many subjects are still under observation, and for how long?</strong> If nobody can answer, the figure you have just been handed measures nothing.</p>
+<p><em>The curve above comes from the <a href="../../en/data/advanced-therapies-eu.html">dataset of advanced therapies authorised in the Union</a>, whose thirty-three rows are public. The article explaining why counts of this segment diverge between sources is <a href="../../en/articles/how-many-advanced-therapies-europe.html">here</a>.</em></p>
+
+
+      <a href="../insights.html" class="back-link">← All articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Business plans, manufacturing costs, pricing and due diligence for the
+          pharmaceutical industry.
+        </p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../data.html">Observatory</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://medipile.fr">Médipile</a></li>
+          <li><a href="https://app.antheosdata.com">Shortage tracker</a></li>
+          <li><a href="../legal.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — Paris Trade Register 948 306 865 · 59 rue de Ponthieu, Office 326, 75008 Paris, France</span>
+    </div>
+  </footer>
+
+</body>
+</html>

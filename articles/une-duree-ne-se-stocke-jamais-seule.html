@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Une durée ne se stocke jamais seule — Antheos Data</title>
+  <meta name="description" content="Mort à soixante mois, vivant à soixante mois : même nombre, sens opposé. Pourquoi une durée sans indicateur d'événement n'est pas une donnée, et ce que Kaplan-Meier répare.">
+  <link rel="canonical" href="https://www.antheosdata.com/articles/une-duree-ne-se-stocke-jamais-seule.html">
+  <meta property="og:title" content="Une durée ne se stocke jamais seule">
+  <meta property="og:description" content="Mort à soixante mois, vivant à soixante mois : même nombre, sens opposé. Pourquoi une durée sans indicateur d'événement n'est pas une donnée, et ce que Kaplan-Meier répare.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/articles/une-duree-ne-se-stocke-jamais-seule.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Une durée ne se stocke jamais seule">
+  <meta name="twitter:description" content="Mort à soixante mois, vivant à soixante mois : même nombre, sens opposé. Pourquoi une durée sans indicateur d'événement n'est pas une donnée, et ce que Kaplan-Meier répare.">
+  <meta name="twitter:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/une-duree-ne-se-stocke-jamais-seule.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/a-duration-is-never-stored-alone.html">
+  <link rel="preload" href="../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../public/stylesheets/style.css?v=20260916-original">
+  <link rel="icon" href="../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Aller au contenu</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — accueil">
+        <img id="logo" src="../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../donnees.html">Observatoire</a></li>
+          <li class="is-active"><a href="../a_lire.html" aria-current="page">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Choix de la langue">
+          <span class="lang-current">FR</span>
+          <span aria-hidden="true"> · </span>
+          <a href="../en/articles/a-duration-is-never-stored-alone.html" lang="en" hreflang="en">EN</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+      <h1>Une durée ne se stocke jamais seule</h1>
+      <p class="article-meta">Durées · Censure à droite · Kaplan-Meier · <time datetime="2026-08-15">15 août 2026</time></p>
+      <details class="article-tools"><summary>Dans cet article</summary><ol><li><a href="#section-1">Une durée seule n&#39;est pas une donnée</a></li><li><a href="#section-2">Trois façons de calculer, trois réponses</a></li><li><a href="#section-3">Kaplan-Meier : deux hommes qui ne voulaient pas écrire ensemble</a></li><li><a href="#section-4">Ce que fait Kaplan-Meier</a></li><li><a href="#section-5">Où cela s&#39;applique</a></li></ol></details>
+
+<p>Comparons deux lignes sur la durée de commercialisation de thérapies innovantes. Nous sommes en juillet 2026. Glybera a une durée de vie de soixante mois et Abecma a une durée de vie de cinquante-neuf mois.</p>
+<p>Mais, différence de taille, le premier produit a été arrêté. Le second se vend toujours après cinquante-neuf mois de mise sur le marché. Si vos données ne contiennent qu&#39;un nom et une durée, <strong>ces deux lignes sont indiscernables</strong>. Elles n&#39;ont pourtant pas du tout le même sens. Nous allons voir comment traité ce chiffre pour en tirer des statistiques cohérentes.</p>
+<h2 id="section-1">Une durée seule n&#39;est pas une donnée</h2>
+<p>Le problème tient en une phrase : une durée brute ne nous dit pas si l&#39;histoire est finie ou pas. Pour Glybera, l&#39;observation est complète. On a vu le début, on a vu la fin. Pour Abecma, l&#39;observation est <strong>interrompue par notre propre calendrier</strong> : le produit est toujours là au moment où l&#39;on arrête de compter. Sa durée de vie est <em>au moins</em> cinquante-neuf mois.</p>
+<p>Les statisticiens appellent cela la <strong>censure à droite</strong> : quelque chose a été coupé à droite de l&#39;observation, plus tard. Or, une durée censurée n&#39;est pas une valeur bruitée ou approximative, c&#39;est une valeur dont on sait seulement qu&#39;elle sera supérieure à ce qu&#39;on a relevé, il s&#39;agit d&#39;un minimum.</p>
+<p><strong>Une durée de vie ne se stocke donc jamais seule</strong>. Elle voyage toujours avec deux compagnons — une date de relevé, et un indicateur d&#39;événement, qui dit si la fin est survenue ou pas encore. Sans elles, le fichier est ambigu, et aucun calcul ne peut rattraper ce défaut de conception.</p>
+<h2 id="section-2">Trois façons de calculer, trois réponses</h2>
+<p>Prenons le cas suivant. Trente-trois autorisations européennes de thérapies innovantes ont été octroyées depuis 2009 ; neuf se sont éteintes, vingt-quatre sont toujours en vigueur. Quelle est la durée de vie moyenne de ces produits sur le marché ? La question est simple et la réponse devrait l&#39;être aussi. Elle ne l&#39;est pas. Voyons pourquoi.</p>
+<p>Calculons selon une <strong>première méthode, la médiane.</strong> Résultat : cinquante mois. Le calcul est faux dès le premier terme, parce qu&#39;il traite les cinquante-neuf mois d&#39;Abecma comme une vie achevée alors que c&#39;est un plancher. Chaque produit vivant tire le résultat vers le bas d&#39;une quantité inconnue. <strong>Cinquante mois est une sous-estimation</strong>, et l&#39;on ne sait pas de combien.</p>
+<p><strong>Deuxième méthode, la plus prudente en apparence.</strong> On ne garde que les cas terminés, les neuf sorties, et on prend leur médiane : trente-huit mois. Le calcul est exact, mais il ne répond plus à la question posée. Il répond à la question: <em>à quel âge les produits meurent-ils ?</em></p>
+<p>Ces deux méthodes ont un défaut commun, c&#39;est de faire comme si la censure n&#39;existait pas. Il nous faudrait une méthode qui ne jette personne, et qui ne fasse dire à un produit vivant que ce qu&#39;il sait réellement.</p>
+<p><strong>Troisième méthode, donc.</strong> Kaplan-Meier. Et là, malheur, pas de réponse « en dur » n&#39;apparaît : sur toute la période observée, plus de la moitié des autorisations sont encore vivantes, on ne peut donc pas dire à quel âge la moitié d&#39;entre elles se termine, puisque ce moment n&#39;est pas encore arrivé.</p>
+<p>La méthode refuse de donner un chiffre unique mais donne autre chose : une courbe, et des valeurs à des horizons que l&#39;on choisit. <strong>18 % d&#39;extinctions à cinq ans, 45 % à sept ans.</strong> Ce sont ces valeurs-là qui entrent dans un modèle de valorisation, pas une médiane.</p>
+<p>Cinquante mois, trente-huit mois, ou pas de médiane du tout. Trois résultats, un seul jeu de données, trente-trois lignes. Le troisième est le seul honnête — et il l&#39;est précisément parce qu&#39;il refuse de résumer un ensemble de donnée par un nombre.</p>
+<h2 id="section-3">Kaplan-Meier : deux hommes qui ne voulaient pas écrire ensemble</h2>
+<p>Comme souvent en statistiques, la méthode provient à l&#39;origine d&#39;une question médicale : <em>ce traitement fait-il vivre les malades plus longtemps ?</em> Le problème était connu depuis longtemps des actuaires et des médecins. Pour savoir si un traitement prolonge la vie, il faut suivre des patients — mais l&#39;étude s&#39;arrête à une date, certains patients déménagent, d&#39;autres cessent de venir, et l&#39;on se retrouve avec une population dont une partie seulement a une histoire complète. Les jeter, c&#39;est jeter les survivants, c&#39;est-à-dire précisément ceux chez qui le traitement a peut-être marché.</p>
+<p>En 1952, <strong>Paul Meier</strong>, à Johns Hopkins, tombe sur un article de Greenwood consacré à la durée de survie au cancer. Un an plus tard, <strong>Edward Kaplan</strong>, aux Bell Telephone Laboratories, s&#39;intéresse lui à un tout autre sujet : la durée de vie des tubes à vide dans les répéteurs des câbles téléphoniques immergés au fond de l&#39;océan. Des malades d&#39;un côté, des composants électroniques de l&#39;autre, et exactement le même problème mathématique, dans les deux cas on ne peut pas attendre que tout le monde soit mort pour conclure.</p>
+<p>Kaplan montre son manuscrit à Tukey, qui lui apprend que Meier travaille déjà sur la question et que son texte circule dans le laboratoire. Les deux manuscrits partent au <em>Journal of the American Statistical Association</em>, qui refuse de publier deux fois la même idée et recommande un article commun.</p>
+<p>C&#39;est là que commence une brouille. Kaplan la résumera trente ans plus tard en : « <strong>Une correspondance abondante, sur quatre années, fut nécessaire pour concilier nos approches divergentes, et nous craignions pendant ce temps que quelqu&#39;un d&#39;autre publie l&#39;idée.</strong> » </p>
+<p>L&#39;article paraît finalement en 1958, sous les deux noms, et devient l&#39;un des plus cités de toute la littérature scientifique. Ironie supplémentaire : Kaplan avait développé sa part pour des usages explicitement non biologiques, et il faudra attendre 1969 et les travaux de Gehan, au MD Anderson, pour que la méthode entre vraiment dans la littérature médicale — d&#39;où elle n&#39;est plus jamais sortie.</p>
+<h2 id="section-4">Ce que fait Kaplan-Meier</h2>
+<p>La méthode est plus simple que son nom ne le suggère car elle ne fait que constater et compter.</p>
+<p>Elle regarde ce qui &quot;vit&quot; à un instant donné, elle demande : <em>à ce moment, combien de sujets étaient encore sous observation, et combien sont morts ?</em> Skysona s&#39;éteint à quatre mois ; trente et un produits étaient alors observables ; un est mort. La survie tombe donc à 30/31, soit 96,8 %. Puis elle passe à la mort suivante et recommence, sur la population <strong>encore observable à cet instant-là</strong>. Et ainsi de suite.</p>
+<p>Un produit encore sur le marché compte pleinement dans la population à risque <strong>tant qu&#39;on l&#39;observe</strong>, puis il sort discrètement, sans jamais être compté comme un décès. Il a donc dit tout ce qu&#39;il &quot;savait&quot; sans qu&#39;on lui fasse dire ce qu&#39;il ignore. C&#39;est pour cela que la courbe descend par marches, et que les marches deviennent de plus en plus hautes à droite : à mesure que la population observable diminue, chaque retrait du marché pèse davantage.</p>
+<figure>
+  <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Courbe de survie de Kaplan-Meier des 33 autorisations européennes de thérapies innovantes. La survie descend par marches de 100 % à environ 55 % sur 82 mois, avec un intervalle de confiance qui s'élargit fortement vers la droite à mesure que les effectifs à risque diminuent. Les effectifs à risque sous l'axe passent de 33 à l'origine à 4 à 96 mois.">
+    <!-- grille -->
+    <g stroke="#dbe8d6" stroke-width="1">
+      <line x1="64" y1="28"  x2="648" y2="28"/>
+      <line x1="64" y1="97"  x2="648" y2="97"/>
+      <line x1="64" y1="167" x2="648" y2="167"/>
+      <line x1="64" y1="236" x2="648" y2="236"/>
+      <line x1="64" y1="306" x2="648" y2="306"/>
+    </g>
+    <!-- intervalle de confiance à 95 % -->
+    <polygon points="64.0,28.0 84.0,28.0 84.0,29.3 111.2,29.3 111.2,32.7 160.8,32.7 160.8,37.5 228.5,37.5 228.5,43.4 247.5,43.4 247.5,50.0 356.5,50.0 356.5,69.5 456.7,69.5 456.7,82.8 462.1,82.8 462.1,97.9 648.0,97.9 648.0,227.5 462.1,227.5 462.1,205.1 456.7,205.1 456.7,177.9 356.5,177.9 356.5,134.6 247.5,134.6 247.5,121.7 228.5,121.7 228.5,107.9 160.8,107.9 160.8,94.1 111.2,94.1 111.2,85.7 84.0,85.7 84.0,28.0"
+             fill="#7ed957" opacity="0.16"/>
+    <!-- courbe de survie -->
+    <polyline points="64.0,28.0 84.0,28.0 84.0,37.0 111.2,37.0 111.2,46.2 160.8,46.2 160.8,56.6 228.5,56.6 228.5,67.5 247.5,67.5 247.5,78.3 356.5,78.3 356.5,110.8 456.7,110.8 456.7,132.5 462.1,132.5 462.1,154.2 648.0,154.2"
+              fill="none" stroke="#0b4912" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- marques de censure : chaque trait est une autorisation encore en vigueur -->
+    <g stroke="#4caf5e" stroke-width="1.6">
+      <line x1="68.4" y1="23" x2="68.4" y2="33"/>   <line x1="73.7" y1="23" x2="73.7" y2="33"/>
+      <line x1="95.6" y1="32" x2="95.6" y2="42"/>   <line x1="117.5" y1="41" x2="117.5" y2="51"/>
+      <line x1="123.9" y1="41" x2="123.9" y2="51"/> <line x1="137.5" y1="41" x2="137.5" y2="51"/>
+      <line x1="207.6" y1="52" x2="207.6" y2="62"/> <line x1="264.5" y1="73" x2="264.5" y2="83"/>
+      <line x1="274.7" y1="73" x2="274.7" y2="83"/> <line x1="293.2" y1="73" x2="293.2" y2="83"/>
+      <line x1="299.1" y1="73" x2="299.1" y2="83"/> <line x1="307.8" y1="73" x2="307.8" y2="83"/>
+      <line x1="315.6" y1="73" x2="315.6" y2="83"/> <line x1="352.6" y1="73" x2="352.6" y2="83"/>
+      <line x1="391.5" y1="106" x2="391.5" y2="116"/> <line x1="392.0" y1="106" x2="392.0" y2="116"/>
+      <line x1="425.6" y1="106" x2="425.6" y2="116"/> <line x1="512.2" y1="149" x2="512.2" y2="159"/>
+      <line x1="526.8" y1="149" x2="526.8" y2="159"/> <line x1="592.5" y1="149" x2="592.5" y2="159"/>
+    </g>
+    <!-- axes -->
+    <g stroke="#56684f" stroke-width="1.4">
+      <line x1="64" y1="28" x2="64" y2="306"/>
+      <line x1="64" y1="306" x2="648" y2="306"/>
+    </g>
+    <!-- graduations y -->
+    <g font-size="12" fill="#56684f" text-anchor="end" font-family="Inter, system-ui, sans-serif">
+      <text x="56" y="32">100 %</text>
+      <text x="56" y="101">75 %</text>
+      <text x="56" y="171">50 %</text>
+      <text x="56" y="240">25 %</text>
+      <text x="56" y="310">0 %</text>
+    </g>
+    <!-- graduations x -->
+    <g font-size="12" fill="#56684f" text-anchor="middle" font-family="Inter, system-ui, sans-serif">
+      <text x="64" y="324">0</text>
+      <text x="181" y="324">24</text>
+      <text x="298" y="324">48</text>
+      <text x="414" y="324">72</text>
+      <text x="531" y="324">96</text>
+      <text x="648" y="324">120</text>
+      <text x="356" y="344" font-size="12.5">mois depuis l'octroi de l'autorisation</text>
+    </g>
+    <!-- effectifs à risque, sous l'axe -->
+    <g font-size="12" fill="#56684f" font-family="Inter, system-ui, sans-serif">
+      <text x="64" y="372" font-size="11" text-anchor="start" font-weight="600">Effectifs à risque</text>
+      <g text-anchor="middle" font-variant-numeric="tabular-nums">
+        <text x="64" y="390">33</text>
+        <text x="181" y="390">24</text>
+        <text x="298" y="390">18</text>
+        <text x="414" y="390">10</text>
+        <text x="531" y="390">4</text>
+        <text x="648" y="390">3</text>
+      </g>
+    </g>
+  </svg>
+  <figcaption>Survie des 33 autorisations européennes de thérapies innovantes, estimation de Kaplan-Meier. La zone claire est l'intervalle de confiance à 95 % ; les petits traits verticaux marquent les autorisations encore en vigueur, censurées à droite. Recensement arrêté au 27 juillet 2026.</figcaption>
+</figure>
+
+<p>Deux choses à noter sur ce graphique. La première, <strong>l&#39;incertitude n&#39;est pas constante</strong>. À gauche, la bande de confiance est étroite — trente-trois produits sont observés, l&#39;estimation est solide. À droite, elle s&#39;ouvre en éventail : à quatre-vingt-deux mois, le risque d&#39;extinction est estimé à 45 %, mais l&#39;intervalle va de 30 à 79 %. Il ne reste plus que quatre produits suivis aussi longtemps, et quatre produits ne permettent pas d&#39;être précis.</p>
+<p>La seconde, <strong>les effectifs sous l&#39;axe sont un élément important du graphique</strong>. Trente-trois produits à l&#39;origine, dix à six ans, quatre à huit ans. Toute affirmation portant sur le long terme repose donc sur une poignée d&#39;observations. Publier et surtout les lire ces effectifs, c&#39;est empêcher le lecteur de faire dire à la courbe plus qu&#39;elle ne sait.</p>
+<p>Une condition, enfin, sans laquelle rien de tout cela ne tient. Kaplan-Meier suppose que <strong>la censure ne dit rien sur le pronostic</strong> : cesser d&#39;observer un sujet doit être sans rapport avec son état. Ici c&#39;est vérifié par construction, puisque la censure vient uniquement de la date d&#39;arrêt — les vingt-quatre autorisations vivantes ne se sont pas soustraites au décompte, c&#39;est nous qui avons cessé de compter au 27 juillet 2026. Quand les sujets disparaissent pour d&#39;autres raisons, l&#39;estimation devient trop optimiste sans que rien ne le signale ; <a href="../articles/survie-globale-sans-progression-sans-recidive.html">j&#39;y reviens à propos des essais cliniques</a>, où le problème est autrement plus vif.</p>
+<h2 id="section-5">Où cela s&#39;applique</h2>
+<p>Partout où une population est suivie sur des durées inégales, c&#39;est-à-dire à peu près partout. La durée de vie d&#39;un projet dans un portefeuille. Le temps jusqu&#39;au remboursement d&#39;une innovation. La persistance d&#39;un patient sous traitement. Le churn d&#39;un abonnement, où les clients encore actifs sont précisément ceux qu&#39;on ne sait pas encore compter. Le délai de paiement d&#39;une facture...</p>
+<p>Et bien sûr, là où la méthode est née : les essais cliniques. Avec une difficulté supplémentaire que cet article a laissée de côté ; en médecine, on ne mesure pas <em>la</em> survie, mais l&#39;un des critères possibles. Survie globale, survie sans progression, survie sans récidive : mêmes patients, mêmes dates, courbes différentes.</p>
+<p><em>La courbe ci-dessus provient du <a href="../donnees/therapies-innovantes-ue.html">jeu de données des thérapies innovantes autorisées dans l&#39;Union</a>, dont les trente-trois lignes sont publiques. L&#39;article qui explique pourquoi les décomptes de ce segment divergent selon les sources se lit <a href="../articles/combien-therapies-innovantes-europe.html">ici</a>.</em></p>
+
+
+      <a href="../a_lire.html" class="back-link">← Tous les articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Business plans, coûts industriels, prix et due diligence pour l'industrie
+          pharmaceutique.
+        </p>
+      </div>
+      <nav aria-label="Navigation pied de page">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../approche.html">Approche</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a href="../donnees.html">Observatoire</a></li>
+          <li><a href="../a_lire.html">À lire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://medipile.fr">Médipile</a></li>
+          <li><a href="https://app.antheosdata.com">Outil pénuries</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — RCS Paris 948 306 865 · 59 rue de Ponthieu, Bureau 326, 75008 Paris</span>
+    </div>
+  </footer>
+
+</body>
+</html>

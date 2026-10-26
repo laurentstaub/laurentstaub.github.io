@@ -1,0 +1,1374 @@
+{
+ "meta": {
+  "version": "1.0",
+  "dateArret": "2026-07-27",
+  "unite": {
+   "fr": "une ligne par autorisation de mise sur le marché centralisée",
+   "en": "one row per centralised marketing authorisation"
+  },
+  "source": {
+   "fr": "Agence européenne des médicaments — rapports européens publics d'évaluation, registre des autorisations, déclarations publiques de retrait ; registre communautaire de la Commission ; Journal officiel de l'Union européenne.",
+   "en": "European Medicines Agency — European public assessment reports, register of authorisations, public withdrawal statements; European Commission union register; Official Journal of the European Union."
+  },
+  "censure": {
+   "fr": "Les autorisations en vigueur sont censurées à droite à la date d'arrêt : leur durée est une durée minimale.",
+   "en": "Authorisations still in force are right-censored at the cut-off date: their duration is a minimum, not a lifetime."
+  },
+  "nProduits": 33
+ },
+ "produits": [
+  {
+   "id": 1,
+   "marque": "Chondrocelect",
+   "dci": "Chondrocytes autologues viables caractérisés, expansés ex vivo",
+   "titulaire": "TiGenix N.V.",
+   "categorie": {
+    "fr": "Ingénierie tissulaire",
+    "en": "Tissue engineering"
+   },
+   "dateAmm": "2009-10-05",
+   "anneeAmm": 2009,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 118,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2016-07-29",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 81.8,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/chondrocelect"
+  },
+  {
+   "id": 2,
+   "marque": "Glybera",
+   "dci": "Alipogène tiparvovec",
+   "titulaire": "uniQure biopharma B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2012-10-25",
+   "anneeAmm": 2012,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Circonstances exceptionnelles",
+    "en": "Exceptional circumstances"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 27,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2017-10-28",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 60.1,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/glybera"
+  },
+  {
+   "id": 3,
+   "marque": "MACI",
+   "dci": "Chondrocytes autologues cultivés caractérisés appliqués sur matrice",
+   "titulaire": "Genzyme Europe B.V.",
+   "categorie": {
+    "fr": "Ingénierie tissulaire",
+    "en": "Tissue engineering"
+   },
+   "dateAmm": "2013-06-27",
+   "anneeAmm": 2013,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 144,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2018-07-01",
+   "motif": {
+    "fr": "Fabrication",
+    "en": "Manufacturing"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 60.1,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/maci"
+  },
+  {
+   "id": 4,
+   "marque": "Provenge",
+   "dci": "Sipuleucel-T",
+   "titulaire": "Dendreon UK Ltd",
+   "categorie": {
+    "fr": "Thérapie cellulaire",
+    "en": "Somatic cell therapy"
+   },
+   "dateAmm": "2013-09-06",
+   "anneeAmm": 2013,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 512,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2015-05-06",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 19.9,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/provenge"
+  },
+  {
+   "id": 5,
+   "marque": "Holoclar",
+   "dci": "Cellules épithéliales cornéennes autologues expansées ex vivo contenant des cellules souches",
+   "titulaire": "Chiesi Farmaceutici S.p.A.",
+   "categorie": {
+    "fr": "Ingénierie tissulaire",
+    "en": "Tissue engineering"
+   },
+   "dateAmm": "2015-02-17",
+   "anneeAmm": 2015,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 104,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 137.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/holoclar"
+  },
+  {
+   "id": 6,
+   "marque": "Imlygic",
+   "dci": "Talimogène laherparepvec",
+   "titulaire": "Amgen Europe B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2015-12-16",
+   "anneeAmm": 2015,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 436,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 127.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/imlygic"
+  },
+  {
+   "id": 7,
+   "marque": "Strimvelis",
+   "dci": "Fraction cellulaire CD34+ autologue transduite par vecteur rétroviral codant l'ADA",
+   "titulaire": "GlaxoSmithKline Trading Services",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2016-05-26",
+   "anneeAmm": 2016,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 12,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 122.0,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/strimvelis"
+  },
+  {
+   "id": 8,
+   "marque": "Zalmoxis",
+   "dci": "Lymphocytes T allogéniques génétiquement modifiés exprimant ΔLNGFR et HSV-TK Mut2",
+   "titulaire": "MolMed S.p.A.",
+   "categorie": {
+    "fr": "Thérapie cellulaire",
+    "en": "Somatic cell therapy"
+   },
+   "dateAmm": "2016-08-18",
+   "anneeAmm": 2016,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 30,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2019-10-09",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 37.7,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/zalmoxis"
+  },
+  {
+   "id": 9,
+   "marque": "Spherox",
+   "dci": "Sphéroïdes de chondrocytes autologues associés à une matrice",
+   "titulaire": "CO.DON AG",
+   "categorie": {
+    "fr": "Ingénierie tissulaire",
+    "en": "Tissue engineering"
+   },
+   "dateAmm": "2017-07-10",
+   "anneeAmm": 2017,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 102,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 108.6,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/spherox"
+  },
+  {
+   "id": 10,
+   "marque": "Alofisel",
+   "dci": "Darvadstrocel",
+   "titulaire": "TiGenix S.A.U.",
+   "categorie": {
+    "fr": "Thérapie cellulaire",
+    "en": "Somatic cell therapy"
+   },
+   "dateAmm": "2018-03-23",
+   "anneeAmm": 2018,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 212,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2024-12-13",
+   "motif": {
+    "fr": "Efficacité",
+    "en": "Efficacy"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 80.7,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/alofisel"
+  },
+  {
+   "id": 11,
+   "marque": "Yescarta",
+   "dci": "Axicabtagène ciloleucel",
+   "titulaire": "Kite Pharma EU B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2018-08-23",
+   "anneeAmm": 2018,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 111,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 95.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/yescarta"
+  },
+  {
+   "id": 12,
+   "marque": "Kymriah",
+   "dci": "Tisagenlecleucel",
+   "titulaire": "Novartis Europharm Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2018-08-23",
+   "anneeAmm": 2018,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 92,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 95.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/kymriah"
+  },
+  {
+   "id": 13,
+   "marque": "Luxturna",
+   "dci": "Vorétigène néparvovec",
+   "titulaire": "Novartis Europharm Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2018-11-22",
+   "anneeAmm": 2018,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 31,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 92.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/luxturna"
+  },
+  {
+   "id": 14,
+   "marque": "Zynteglo",
+   "dci": "Bétibéglogène autotemcel",
+   "titulaire": "bluebird bio (Netherlands) B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2019-05-29",
+   "anneeAmm": 2019,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 14,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2022-03-24",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 33.8,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/zynteglo"
+  },
+  {
+   "id": 15,
+   "marque": "Zolgensma",
+   "dci": "Onasemnogène abéparvovec",
+   "titulaire": "AveXis EU Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2020-05-18",
+   "anneeAmm": 2020,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 22,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 74.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/zolgensma"
+  },
+  {
+   "id": 16,
+   "marque": "Tecartus",
+   "dci": "Brexucabtagène autoleucel",
+   "titulaire": "Kite Pharma EU B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2020-12-14",
+   "anneeAmm": 2020,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 74,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 67.4,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/tecartus"
+  },
+  {
+   "id": 17,
+   "marque": "Libmeldy",
+   "dci": "Atidarsagène autotemcel",
+   "titulaire": "Orchard Therapeutics (Netherlands) B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2020-12-17",
+   "anneeAmm": 2020,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 20,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 67.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/libmeldy"
+  },
+  {
+   "id": 18,
+   "marque": "Skysona",
+   "dci": "Élivaldogène autotemcel",
+   "titulaire": "bluebird bio (Netherlands) B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2021-07-16",
+   "anneeAmm": 2021,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 32,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2021-11-18",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Jamais commercialisé",
+    "en": "Never marketed"
+   },
+   "dureeMois": 4.1,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/skysona"
+  },
+  {
+   "id": 19,
+   "marque": "Abecma",
+   "dci": "Idécabtagène vicleucel",
+   "titulaire": "Bristol-Myers Squibb Pharma EEIG",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2021-08-18",
+   "anneeAmm": 2021,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 140,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 59.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/abecma"
+  },
+  {
+   "id": 20,
+   "marque": "Breyanzi",
+   "dci": "Lisocabtagène maraleucel",
+   "titulaire": "Bristol-Myers Squibb Pharma EEIG",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2022-04-04",
+   "anneeAmm": 2022,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": null,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 51.7,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/breyanzi"
+  },
+  {
+   "id": 21,
+   "marque": "Carvykti",
+   "dci": "Ciltacabtagène autoleucel",
+   "titulaire": "Janssen-Cilag International NV",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2022-05-25",
+   "anneeAmm": 2022,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 113,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 50.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/carvykti"
+  },
+  {
+   "id": 22,
+   "marque": "Upstaza",
+   "dci": "Éladocagène exuparvovec",
+   "titulaire": "PTC Therapeutics International Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2022-07-18",
+   "anneeAmm": 2022,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Circonstances exceptionnelles",
+    "en": "Exceptional circumstances"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 28,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 48.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/upstaza"
+  },
+  {
+   "id": 23,
+   "marque": "Roctavian",
+   "dci": "Valoctocogène roxaparvovec",
+   "titulaire": "BioMarin International Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2022-08-24",
+   "anneeAmm": 2022,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 134,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Arrêté",
+    "en": "Withdrawn from market"
+   },
+   "dureeMois": 47.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/roctavian"
+  },
+  {
+   "id": 24,
+   "marque": "Ebvallo",
+   "dci": "Tabélécleucel",
+   "titulaire": "Atara Biotherapeutics Ireland Limited",
+   "categorie": {
+    "fr": "Thérapie cellulaire",
+    "en": "Somatic cell therapy"
+   },
+   "dateAmm": "2022-12-16",
+   "anneeAmm": 2022,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Circonstances exceptionnelles",
+    "en": "Exceptional circumstances"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 43,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 43.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/ebvallo"
+  },
+  {
+   "id": 25,
+   "marque": "Hemgenix",
+   "dci": "Étranacogène dézaparvovec",
+   "titulaire": "CSL Behring GmbH",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2023-02-20",
+   "anneeAmm": 2023,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 54,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 41.2,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/hemgenix"
+  },
+  {
+   "id": 26,
+   "marque": "Casgevy",
+   "dci": "Exagamglogène autotemcel",
+   "titulaire": "Vertex Pharmaceuticals (Ireland) Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2024-02-09",
+   "anneeAmm": 2024,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 42,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 29.5,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/casgevy"
+  },
+  {
+   "id": 27,
+   "marque": "Beqvez (ex-Durveqtix)",
+   "dci": "Fidanacogène élaparvovec",
+   "titulaire": "Pfizer Europe MA EEIG",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2024-07-24",
+   "anneeAmm": 2024,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 45,
+   "statut": {
+    "fr": "Éteinte",
+    "en": "Ended"
+   },
+   "dateFin": "2025-05-15",
+   "motif": {
+    "fr": "Commercial",
+    "en": "Commercial"
+   },
+   "commercialise": {
+    "fr": "Jamais commercialisé",
+    "en": "Never marketed"
+   },
+   "dureeMois": 9.7,
+   "evenement": 1,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/beqvez"
+  },
+  {
+   "id": 28,
+   "marque": "Vyjuvek",
+   "dci": "Bérémagène géperpavec",
+   "titulaire": "Krystal Biotech Netherlands B.V.",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2025-04-23",
+   "anneeAmm": 2025,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 31,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 15.1,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/vyjuvek"
+  },
+  {
+   "id": 29,
+   "marque": "Aucatzyl",
+   "dci": "Obécabtagène autoleucel",
+   "titulaire": "Autolus GmbH",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2025-07-17",
+   "anneeAmm": 2025,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 94,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 12.3,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/aucatzyl"
+  },
+  {
+   "id": 30,
+   "marque": "Zemcelpro",
+   "dci": "Dorocubicel et cellules CD34- allogéniques de sang de cordon",
+   "titulaire": "Cordex Biologics International Limited",
+   "categorie": {
+    "fr": "Thérapie cellulaire",
+    "en": "Somatic cell therapy"
+   },
+   "dateAmm": "2025-08-25",
+   "anneeAmm": 2025,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 25,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 11.0,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/zemcelpro"
+  },
+  {
+   "id": 31,
+   "marque": "Waskyra",
+   "dci": "Étuvétidigène autotemcel",
+   "titulaire": "Fondazione Telethon ETS",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2026-01-09",
+   "anneeAmm": 2026,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Standard",
+    "en": "Standard"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 10,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 6.5,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/waskyra"
+  },
+  {
+   "id": 32,
+   "marque": "Adstiladrin",
+   "dci": "Nadofaragène firadénovec",
+   "titulaire": "Ferring Pharmaceuticals A/S",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2026-05-28",
+   "anneeAmm": 2026,
+   "orphelin": {
+    "fr": "Non",
+    "en": "No"
+   },
+   "typeAmm": {
+    "fr": "Conditionnelle",
+    "en": "Conditional"
+   },
+   "design": {
+    "fr": "Bras unique",
+    "en": "Single-arm"
+   },
+   "effectifPivot": 103,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Commercialisé",
+    "en": "Marketed"
+   },
+   "dureeMois": 2.0,
+   "evenement": 0,
+   "source": "https://www.ema.europa.eu/en/medicines/human/EPAR/adstiladrin"
+  },
+  {
+   "id": 33,
+   "marque": "Itvisma",
+   "dci": "Onasemnogène abéparvovec (voie intrathécale)",
+   "titulaire": "Novartis Europharm Limited",
+   "categorie": {
+    "fr": "Thérapie génique",
+    "en": "Gene therapy"
+   },
+   "dateAmm": "2026-06-30",
+   "anneeAmm": 2026,
+   "orphelin": {
+    "fr": "Oui",
+    "en": "Yes"
+   },
+   "typeAmm": {
+    "fr": "Non vérifié",
+    "en": "Not verified"
+   },
+   "design": {
+    "fr": "Randomisé contrôlé",
+    "en": "Randomised controlled"
+   },
+   "effectifPivot": 126,
+   "statut": {
+    "fr": "En vigueur",
+    "en": "In force"
+   },
+   "dateFin": null,
+   "motif": {
+    "fr": "",
+    "en": ""
+   },
+   "commercialise": {
+    "fr": "Non vérifié",
+    "en": "Not verified"
+   },
+   "dureeMois": 0.9,
+   "evenement": 0,
+   "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ%3AC_202603946"
+  }
+ ]
+}

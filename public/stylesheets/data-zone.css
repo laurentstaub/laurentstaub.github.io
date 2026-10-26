@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Zone de données — grammaire dispomed, habillage Antheos Data
+   Portée strictement limitée à .data-zone.
+
+   Ce qui vient de dispomed (app.antheosdata.com) : la structure — panneau de
+   filtres, légende explicite, badges-lettres, boutons de fenêtre, avertissement
+   de provenance — et surtout le CODE COULEUR DE STATUT, qui est sémantique et
+   partagé avec l'application :
+       crimson = rupture/incident · ambre = tension · vert = disponible
+       gris = arrêt de commercialisation · marine = repère européen
+   Ces couleurs ne servent JAMAIS à porter une série de données (INSTRUCTIONS.md).
+
+   Ce qui vient du site : la typographie (Fraunces + Inter), les surfaces, les
+   rayons et les ombres. La zone doit se lire comme une partie du site, pas
+   comme un bloc étranger collé au milieu de l'article.
+
+   Pas de mode sombre : l'application n'en a pas.
+   ========================================================================== */
+
+.data-zone {
+  /* Statuts — repris tels quels de l'application, sémantiques */
+  --dz-rupture: #c92a5f;
+  --dz-tension: #efa83c;
+  --dz-dispo: #5fbd5e;
+  --dz-eteinte: #8e949b;
+  --dz-eu: #1e3a8a;
+
+  /* Surfaces et encres — reprises du site */
+  --dz-surface: var(--white, #fff);
+  --dz-plane: var(--tint, #ecf5e8);
+  --dz-border: var(--line, #dbe8d6);
+  --dz-title: var(--pine-900, #0a2f16);
+  --dz-ink: var(--ink, #1a2519);
+  --dz-ink2: var(--muted, #56684f);
+  --dz-muted: #7d8b9b;
+  --dz-accent: var(--brand, #0b4912);
+  --dz-grid: #eef1f6;
+
+  font-family: var(--font-body, Inter, system-ui, sans-serif);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dz-ink2);
+  background: var(--dz-plane);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius-lg, 16px);
+  padding: 22px;
+
+  /* La zone de données sort de la colonne de lecture (760 px) : un tableau de
+     huit colonnes et une frise de dix-sept ans ont besoin de place. On la
+     recentre sur la page plutôt que sur le texte. */
+  width: min(1240px, 94vw);
+  margin: 2.5rem 50%;
+  transform: translateX(-50%);
+}
+
+.data-zone * { box-sizing: border-box; }
+
+.data-zone h2,
+.data-zone h3 {
+  font-family: var(--font-display, Fraunces, Georgia, serif);
+  color: var(--dz-title);
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+}
+
+.data-zone h2 { font-size: 21px; font-weight: 600; }
+.data-zone h3 { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
+.data-zone p  { max-width: none; margin: 0; }
+
+.dz-head { margin-bottom: 18px; }
+.dz-head .dz-sub { font-size: 13.5px; color: var(--dz-ink2); }
+
+/* ---------- Panneau de filtres (structure dispomed) ---------- */
+.dz-panel {
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+.dz-panel-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--dz-muted);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: flex-end;
+}
+
+.dz-field { display: flex; flex-direction: column; gap: 4px; }
+
+.dz-field label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dz-muted);
+  font-weight: 600;
+}
+
+.dz-field select,
+.dz-field input {
+  font: inherit;
+  font-size: 14px;
+  color: var(--dz-ink);
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  padding: 7px 10px;
+  min-width: 152px;
+  min-height: 38px;
+  margin: 0;
+  width: auto;
+}
+
+.dz-field select:focus,
+.dz-field input:focus {
+  outline: 2px solid var(--leaf, #4caf5e);
+  outline-offset: 1px;
+  border-color: var(--leaf, #4caf5e);
+}
+
+/* Fenêtre d'observation — boutons segmentés, comme « 12 mois / 24 mois / Tout » */
+.dz-segmented { display: flex; gap: 0; }
+
+.dz-segmented button {
+  font: inherit;
+  font-size: 13.5px;
+  background: var(--dz-surface);
+  color: var(--dz-ink2);
+  border: 1px solid var(--dz-border);
+  border-right-width: 0;
+  padding: 8px 13px;
+  min-height: 38px;
+  cursor: pointer;
+  width: auto;
+  margin: 0;
+}
+
+.dz-segmented button:first-child { border-radius: var(--radius, 10px) 0 0 var(--radius, 10px); }
+.dz-segmented button:last-child  { border-radius: 0 var(--radius, 10px) var(--radius, 10px) 0; border-right-width: 1px; }
+.dz-segmented button:hover { background: var(--dz-plane); }
+
+.dz-segmented button[aria-pressed="true"] {
+  background: var(--dz-accent);
+  border-color: var(--dz-accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.dz-reset {
+  font: inherit;
+  font-size: 14px;
+  background: var(--dz-plane);
+  color: var(--dz-accent);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  padding: 8px 14px;
+  min-height: 38px;
+  cursor: pointer;
+  width: auto;
+  margin: 0;
+  font-weight: 500;
+}
+
+.dz-reset:hover { background: #e2eedd; }
+
+/* ---------- Bandeau de synthèse ---------- */
+.dz-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+  gap: 1px;
+  background: var(--dz-border);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.dz-stat { background: var(--dz-surface); padding: 12px 14px; }
+
+.dz-stat .dz-k {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dz-muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.dz-stat .dz-v {
+  font-family: var(--font-display, Fraunces, Georgia, serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--dz-title);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.dz-stat .dz-v small {
+  font-family: var(--font-body, Inter, sans-serif);
+  font-size: 13px; font-weight: 500; color: var(--dz-ink2);
+}
+
+/* Statistique masquée faute d'effectif — METHODE.md §5 */
+.dz-stat.dz-thin .dz-v {
+  font-family: var(--font-body, Inter, sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dz-muted);
+  font-style: italic;
+}
+
+/* ---------- Légende (bloc dispomed) ---------- */
+.dz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  padding: 11px 16px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.dz-legend .dz-legend-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--dz-muted);
+  font-weight: 700;
+}
+
+.dz-legend-item { display: inline-flex; align-items: center; gap: 7px; color: var(--dz-ink2); }
+
+/* ---------- Pastilles de statut ---------- */
+.dz-badge { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+
+.dz-badge::before {
+  content: '';
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--dz-muted);
+  flex: none;
+}
+
+.dz-badge.is-dispo::before   { background: var(--dz-dispo); }
+.dz-badge.is-tension::before { background: var(--dz-tension); }
+.dz-badge.is-arret::before   { background: var(--dz-eteinte); }
+.dz-badge.is-rupture::before { background: var(--dz-rupture); }
+.dz-badge.is-arret { color: var(--dz-eteinte); }
+
+/* ---------- Badges-lettres (H, V, EU chez dispomed) ---------- */
+.dz-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px; height: 19px;
+  padding: 0 4px;
+  margin-right: 3px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  background: var(--dz-plane);
+  color: var(--dz-accent);
+  border: 1px solid var(--dz-border);
+  vertical-align: middle;
+}
+
+.dz-flag.is-eu { background: var(--dz-eu); border-color: var(--dz-eu); color: #fff; }
+
+/* ---------- Tableau ---------- */
+.dz-tablewrap {
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  overflow-x: auto;
+}
+
+.data-zone table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-zone thead th {
+  position: sticky;
+  top: 0;
+  background: var(--dz-surface);
+  border-bottom: 2px solid var(--dz-border);
+  color: var(--dz-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-zone thead th:hover { color: var(--dz-accent); }
+.data-zone thead th[aria-sort] { color: var(--dz-accent); }
+.data-zone thead th .dz-arrow { opacity: .45; font-size: 10px; margin-left: 3px; }
+.data-zone thead th[aria-sort] .dz-arrow { opacity: 1; }
+
+.data-zone tbody td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--dz-grid);
+  color: var(--dz-ink2);
+  vertical-align: top;
+}
+
+.data-zone tbody tr:hover td { background: #fafcf9; }
+.data-zone tbody tr:last-child td { border-bottom: none; }
+
+.dz-num { text-align: right; }
+
+.dz-brand { color: var(--dz-ink); font-weight: 600; }
+.dz-brand a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--dz-border); }
+.dz-brand a:hover { color: var(--dz-accent); border-bottom-color: var(--dz-accent); }
+.dz-dci { display: block; font-size: 12px; color: var(--dz-muted); font-weight: 400; margin-top: 2px; }
+
+/* Une durée censurée porte le préfixe ≥ : c'est une durée minimale. */
+.dz-censored { color: var(--dz-muted); }
+
+.dz-empty { padding: 26px; text-align: center; color: var(--dz-muted); font-style: italic; }
+
+/* ---------- Frise historique ---------- */
+.dz-frise {
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-border);
+  border-radius: var(--radius, 10px);
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.dz-frise .dz-head { margin-bottom: 12px; }
+.dz-frise h3 { margin-bottom: 4px; }
+
+.dz-frise-scroll { overflow-x: auto; }
+
+/* En dessous de cette largeur la frise devient illisible : on la laisse défiler
+   plutôt que de l'écraser. */
+.dz-frise-scroll svg { display: block; min-width: 760px; width: 100%; height: auto; }
+
+.dz-frise .dz-legend {
+  border: none;
+  background: transparent;
+  padding: 10px 0 0;
+  margin: 0;
+  border-top: 1px solid var(--dz-border);
+  border-radius: 0;
+}
+
+.dz-legend-note { color: var(--dz-muted); font-size: 12.5px; }
+
+/* Ligne écartée par les filtres : estompée, jamais retirée — la mise en page de
+   la frise est absolue, un retrait laisserait un trou. */
+.dz-frise-row { transition: opacity .15s ease; }
+.dz-frise-row.is-hors-selection { opacity: 0.13; }
+
+/* ---------- Avertissement de provenance (bloc dispomed) ---------- */
+.dz-notes {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--dz-muted);
+  line-height: 1.5;
+}
+
+.dz-notes p + p { margin-top: 6px; }
+.dz-notes strong { color: var(--dz-ink2); font-weight: 600; }
+
+@media (max-width: 768px) {
+  .data-zone { padding: 16px; border-radius: 0; margin-left: -20px; margin-right: -20px; }
+  .dz-field select, .dz-field input { min-width: 132px; }
+  .dz-legend { gap: 7px 14px; }
+}

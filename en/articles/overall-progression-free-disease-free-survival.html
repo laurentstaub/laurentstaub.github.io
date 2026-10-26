@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survival of what, exactly? — Antheos Data</title>
+  <meta name="description" content="On one cohort of forty patients, the median is 8 months or 18 months depending on the endpoint chosen. What OS, PFS and DFS cover, and why the choice decides an asset's value.">
+  <link rel="canonical" href="https://www.antheosdata.com/en/articles/overall-progression-free-disease-free-survival.html">
+  <meta property="og:title" content="Survival of what, exactly?">
+  <meta property="og:description" content="On one cohort of forty patients, the median is 8 months or 18 months depending on the endpoint chosen. What OS, PFS and DFS cover, and why the choice decides an asset's value.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.antheosdata.com/en/articles/overall-progression-free-disease-free-survival.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Survival of what, exactly?">
+  <meta name="twitter:description" content="On one cohort of forty patients, the median is 8 months or 18 months depending on the endpoint chosen. What OS, PFS and DFS cover, and why the choice decides an asset's value.">
+  <meta name="twitter:image" content="https://www.antheosdata.com/public/images/og-default.png">
+  <link rel="alternate" hreflang="fr" href="https://www.antheosdata.com/articles/survie-globale-sans-progression-sans-recidive.html">
+  <link rel="alternate" hreflang="en" href="https://www.antheosdata.com/en/articles/overall-progression-free-disease-free-survival.html">
+  <link rel="preload" href="../../public/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../public/stylesheets/style.css?v=20260916-original">
+  <link rel="icon" href="../../public/images/favicon.ico">
+  <link rel="icon" type="image/png" href="../../public/images/favicon.png">
+</head>
+
+<body>
+  <a href="#content" class="skip-to-content">Skip to content</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" aria-label="Antheos Data — home">
+        <img id="logo" src="../../public/images/antheos-logo.png" alt="Antheos Data" width="210" height="55">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../data.html">Observatory</a></li>
+          <li class="is-active"><a href="../insights.html" aria-current="page">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="lang-switch" aria-label="Language selection">
+          <a href="../../articles/survie-globale-sans-progression-sans-recidive.html" lang="fr" hreflang="fr">FR</a>
+          <span aria-hidden="true"> · </span>
+          <span class="lang-current">EN</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <article class="prose">
+      <a href="../insights.html" class="back-link">← All articles</a>
+      <h1>Survival of what, exactly?</h1>
+      <p class="article-meta">Endpoints · Oncology · Valuation · <time datetime="2026-09-12">12 September 2026</time></p>
+      <details class="article-tools"><summary>In this article</summary><ol><li><a href="#section-1">Four ways of defining the end</a></li><li><a href="#section-2">The same patient, coded three ways</a></li><li><a href="#section-3">What that gives on a whole cohort</a></li><li><a href="#section-4">Not all censoring is equal</a></li><li><a href="#section-5">Why industry rarely chooses overall survival</a></li><li><a href="#section-6">The trap of the assessment schedule</a></li><li><a href="#section-7">A hazard ratio is an average like any other</a></li><li><a href="#section-8">What this changes for valuing an asset</a></li></ol></details>
+
+<p>A company announces that its product &quot;improves survival by eight months&quot;. The sentence looks clear. It is not, and one word is missing: survival <strong>of what</strong>?</p>
+<p>Because in oncology, we never measure survival. We measure one of the possible endpoints, and the same trial, on the same patients, at the same dates, produces different curves depending on which one was chosen. The choice of endpoint is not a debate for methodologists: it is <strong>the parameter that decides the result</strong>, the read-out schedule of the trial, and ultimately what the asset is worth.</p>
+<h2 id="section-1">Four ways of defining the end</h2>
+<p>A survival curve needs two things: a start date, and an event marking the end. The start date is rarely disputed. The event is.</p>
+<p><strong>Overall survival</strong> — OS. The event is death, from any cause. It is the most solid endpoint there is: death is not a matter of opinion, does not depend on the observer&#39;s eye, does not vary with the protocol. A patient still alive at the end of follow-up is censored, and that is all.</p>
+<p><strong>Progression-free survival</strong> — PFS. The event is disease progression <strong>or</strong> death, whichever comes first. A composite endpoint, then, and one that assumes we can say when the disease progressed.</p>
+<p><strong>Disease-free survival</strong> — DFS. Used after curative-intent treatment, typically surgery: the patient leaves disease-free, and the event is the reappearance of the disease or death. It appears under other names depending on what one decides to include — recurrence-free survival when deaths unrelated to the disease are excluded.</p>
+<p><strong>Time to progression</strong> — TTP. Progression alone, with deaths treated as censoring. This one deserves a warning: censoring deaths in order to measure progression amounts to pretending a deceased patient will progress later. That is the competing-risks error, and it always overstates the endpoint measured. When several exits compete for the same population, cumulative incidence is required, not one curve per cause.</p>
+<blockquote>
+<p>A survival curve does not measure life. It measures the definition we gave to the end.</p>
+</blockquote>
+<h2 id="section-2">The same patient, coded three ways</h2>
+<p>It is at patient level that this becomes tangible. Take six patients from a metastatic cohort, followed to a cut-off set at thirty-six months, and watch how each one enters each calculation.</p>
+<table>
+<thead>
+<tr>
+<th>Patient</th>
+<th>What happens</th>
+<th>OS</th>
+<th>PFS</th>
+<th>TTP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>Progresses at 7 months, dies at 21</td>
+<td>event at 21</td>
+<td>event at <strong>7</strong></td>
+<td>event at 7</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Dies at 9 months, no documented progression</td>
+<td>event at 9</td>
+<td>event at <strong>9</strong></td>
+<td><strong>censored</strong> at 9</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Alive, progression-free at 36 months</td>
+<td>censored at 36</td>
+<td>censored at 36</td>
+<td>censored at 36</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Progresses at 11 months, alive at 36</td>
+<td>censored at 36</td>
+<td>event at <strong>11</strong></td>
+<td>event at 11</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Lost to follow-up at 14 months, no event</td>
+<td>censored at 14</td>
+<td>censored at 14</td>
+<td>censored at 14</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Progresses at 5 months, lost to follow-up at 16</td>
+<td>censored at 16</td>
+<td>event at <strong>5</strong></td>
+<td>event at 5</td>
+</tr>
+</tbody></table>
+<p>Three columns, six patients, and not a single row identical throughout. Patient B is the most instructive: he never progressed, yet he counts as an event in progression-free survival — because death is part of it — while he is censored in time to progression. Patient D is an event in PFS and a censoring in OS: the same man, on the same date, counted in one case and set aside in the other.</p>
+<p>A file holding only a &quot;duration&quot; column and a &quot;status&quot; column cannot produce those three readings. You need the progression date, the death date, the last-contact date, and you need to know which one is missing and why.</p>
+<h2 id="section-3">What that gives on a whole cohort</h2>
+<p>Move to forty patients. Here, on exactly the same records, are the two curves obtained by changing only the definition of the event.</p>
+<figure>
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two Kaplan-Meier curves computed on the same cohort of forty patients. The progression-free survival curve falls much faster and crosses 50% at about 8 months; the overall survival curve falls more slowly and crosses 50% at about 18 months.">
+    <g stroke="#dbe8d6" stroke-width="1">
+      <line x1="64" y1="28"  x2="648" y2="28"/>
+      <line x1="64" y1="96"  x2="648" y2="96"/>
+      <line x1="64" y1="164" x2="648" y2="164"/>
+      <line x1="64" y1="232" x2="648" y2="232"/>
+      <line x1="64" y1="300" x2="648" y2="300"/>
+    </g>
+    <line x1="64" y1="164" x2="648" y2="164" stroke="#7d8b9b" stroke-width="1" stroke-dasharray="5 4"/>
+    <polyline points="64.0,28.0 90.0,28.0 90.0,34.8 99.7,34.8 99.7,41.6 101.3,41.6 101.3,55.2 117.5,55.2 117.5,62.0 125.6,62.0 125.6,75.6 130.5,75.6 130.5,82.4 140.2,82.4 140.2,89.2 141.9,89.2 141.9,96.0 143.5,96.0 143.5,102.8 151.6,102.8 151.6,109.6 154.8,109.6 154.8,116.4 156.5,116.4 156.5,123.2 163.0,123.2 163.0,130.0 172.7,130.0 172.7,136.8 185.7,136.8 185.7,143.6 195.4,143.6 195.4,157.2 197.0,157.2 197.0,164.0 198.6,164.0 198.6,170.8 213.2,170.8 213.2,177.6 229.5,177.6 229.5,184.4 234.3,184.4 234.3,191.2 236.0,191.2 236.0,198.0 245.7,198.0 245.7,211.6 248.9,211.6 248.9,218.4 252.2,218.4 252.2,225.2 257.0,225.2 257.0,232.0 258.7,232.0 258.7,238.8 261.9,238.8 261.9,245.6 263.5,245.6 263.5,252.4 265.2,252.4 265.2,259.2 270.0,259.2 270.0,266.0 289.5,266.0 289.5,272.8 297.6,272.8 297.6,279.6 313.8,279.6 313.8,286.4 401.4,286.4 401.4,293.2 591.2,293.2 591.2,300.0 648.0,300.0"
+              fill="none" stroke="#4a3aa7" stroke-width="2.4" stroke-linejoin="round"/>
+    <polyline points="64.0,28.0 141.9,28.0 141.9,34.8 169.4,34.8 169.4,41.6 175.9,41.6 175.9,62.0 198.6,62.0 198.6,68.8 216.5,68.8 216.5,75.6 223.0,75.6 223.0,82.4 227.8,82.4 227.8,89.2 236.0,89.2 236.0,96.0 237.6,96.0 237.6,102.8 247.3,102.8 247.3,109.6 291.1,109.6 291.1,116.4 302.5,116.4 302.5,123.2 305.7,123.2 305.7,143.6 320.3,143.6 320.3,150.4 330.0,150.4 330.0,157.2 357.6,157.2 357.6,170.8 362.5,170.8 362.5,177.6 367.4,177.6 367.4,184.4 377.1,184.4 377.1,191.2 394.9,191.2 394.9,198.0 404.7,198.0 404.7,204.8 411.2,204.8 411.2,211.6 430.6,211.6 430.6,218.4 440.4,218.4 440.4,225.2 455.0,225.2 455.0,232.0 461.4,232.0 461.4,238.8 503.6,238.8 503.6,252.4 586.4,252.4 586.4,259.2 592.8,259.2 592.8,266.0 610.7,266.0 610.7,272.8 648.0,272.8"
+              fill="none" stroke="#0b4912" stroke-width="2.4" stroke-linejoin="round"/>
+    <g stroke="#7d8b9b" stroke-width="1" stroke-dasharray="3 3">
+      <line x1="197" y1="164" x2="197" y2="300"/>
+      <line x1="358" y1="164" x2="358" y2="300"/>
+    </g>
+    <g font-size="12" font-family="Inter, system-ui, sans-serif" font-weight="600">
+      <text x="205" y="322" fill="#4a3aa7">8.2 months</text>
+      <text x="366" y="322" fill="#0b4912">18.1 months</text>
+    </g>
+    <g stroke="#56684f" stroke-width="1.4">
+      <line x1="64" y1="28" x2="64" y2="300"/>
+      <line x1="64" y1="300" x2="648" y2="300"/>
+    </g>
+    <g font-size="12" fill="#56684f" text-anchor="end" font-family="Inter, system-ui, sans-serif">
+      <text x="56" y="32">100%</text><text x="56" y="100">75%</text>
+      <text x="56" y="168">50%</text><text x="56" y="236">25%</text><text x="56" y="304">0%</text>
+    </g>
+    <g font-size="12" fill="#56684f" text-anchor="middle" font-family="Inter, system-ui, sans-serif">
+      <text x="64" y="340">0</text><text x="161" y="340">6</text><text x="259" y="340">12</text>
+      <text x="356" y="340">18</text><text x="453" y="340">24</text><text x="551" y="340">30</text>
+      <text x="648" y="340">36</text>
+      <text x="356" y="362" font-size="12.5">months since enrolment</text>
+    </g>
+    <g font-size="12.5" font-family="Inter, system-ui, sans-serif" font-weight="600">
+      <line x1="440" y1="52" x2="470" y2="52" stroke="#4a3aa7" stroke-width="2.4"/>
+      <text x="478" y="56" fill="#4a3aa7">Progression-free survival</text>
+      <line x1="440" y1="74" x2="470" y2="74" stroke="#0b4912" stroke-width="2.4"/>
+      <text x="478" y="78" fill="#0b4912">Overall survival</text>
+    </g>
+  </svg>
+  <figcaption>Quarante patients, une seule cohorte, deux définitions de l'événement. Médiane de survie sans progression : 8.2 months. Médiane de survie globale : 18.1 months. Cohorte construite à titre d'illustration ; les ordres de grandeur sont ceux d'une situation métastatique courante.</figcaption>
+</figure>
+
+<p>A ratio of one to two. And these are not two populations, nor two treatments, nor two periods: they are the same forty records, read twice.</p>
+<p>Something else can be read off the drawing. At six months, progression-free survival has already fallen to 65 % while overall survival is still at 98 %: in the early months almost everything that happens is a progression, almost nobody dies. By twenty-four months the relation reverses — there is nothing left to progress, and overall survival keeps declining slowly. <strong>The two curves do not merely measure different quantities, they describe different moments of the disease.</strong></p>
+<p>A sponsor reading the trial on progression has an answer around month twelve. The same trial read on overall survival is not ripe for three years, and even then.</p>
+<h2 id="section-4">Not all censoring is equal</h2>
+<p>Go back to the table of six patients and stop at E and F. Both are censored, like patient C. But C is censored because the study ended while he was doing well, whereas E and F <strong>disappeared</strong>. The calculation treats them in exactly the same way. It should not.</p>
+<p>Kaplan-Meier rests on an assumption rarely stated aloud: censoring must say <strong>nothing about prognosis</strong>. Leaving observation must be unrelated to being about to progress or die. Statisticians call this non-informative censoring, and everything depends on why we stopped seeing the subject.</p>
+<p>There is <strong>administrative</strong> censoring: the study stops on a date, we stop observing everyone at once. The calendar does not know who is going to die, it does not choose whom it censors. That censoring is clean by construction.</p>
+<p>And there is <strong>loss to follow-up</strong>, which is another matter entirely. A patient stops coming to clinic. Why? Sometimes he has moved, and it means nothing. Often he is too unwell to travel, or he has been admitted elsewhere, or he has died without the centre being told. In those cases the patient leaves the study <strong>precisely because his prognosis has worsened</strong> — and he leaves without being counted as an event. The resulting curve is too flattering, and nothing in the calculation says so.</p>
+<p>The direction of the bias is worth seeing clearly. Patients lost to follow-up are, on average, in worse shape than those who come back. Removing them from the population at risk amounts to keeping only the healthier: estimated survival rises. <strong>Loss to follow-up always flatters the result</strong>, which is awkward when you are trying to demonstrate a benefit.</p>
+<p>Hence three reflexes when facing a published curve. Look at the <strong>rate of loss to follow-up</strong> — beyond 10 to 15 %, caution is due. Check that it is <strong>comparable between arms</strong>: an arm losing twice as many patients as the other invalidates the comparison, and this happens when a treatment is harder to tolerate. And look for the <strong>sensitivity analysis</strong>: what becomes of the result if every patient lost to follow-up is assumed to have progressed the day after their last visit? If the conclusion survives that pessimistic scenario it is solid; if it collapses, it rested on the absent.</p>
+<p>The distinction is not confined to the clinic. A customer who stops answering your reminders is not in the same situation as one whose contract is still running at your analysis cut-off. The first has probably already gone.</p>
+<h2 id="section-5">Why industry rarely chooses overall survival</h2>
+<p>There, then, is the reason, and it is prosaic: <strong>overall survival is slow</strong>.</p>
+<p>Take an adjuvant setting — a cancer removed by surgery, a treatment meant to prevent relapse. Most patients will not die within the trial window; many will not die of the disease. Waiting for enough deaths to compare two arms would take ten or fifteen years. No sponsor funds that, and it would be questionable to keep the next patients waiting when the answer already exists in another form.</p>
+<p>So we measure recurrence, which happens far sooner. The trial reads out faster, costs less, the authorisation arrives earlier, the asset is valued earlier. Everyone gains — on one condition: that not recurring correctly predicts living longer.</p>
+<p>That condition does not hold everywhere. It has been established on large meta-analyses in some tumour types and remains debated in others. A progression-free survival gain may perfectly well fail to translate into an overall survival gain: because the benefit wears off, because patients in the other arm receive the treatment when they progress — which mechanically brings the two overall survival curves closer without taking anything away from the real benefit — or because progression seen on imaging was not the event that mattered to the patient.</p>
+<p>In other words: <strong>the intermediate endpoint is a bet on the final one</strong>. A reasonable bet, sometimes a validated one, never a free one.</p>
+<h2 id="section-6">The trap of the assessment schedule</h2>
+<p>Here is a subtlety that costs money and is rarely discussed outside methodology teams.</p>
+<p>Death has a date. Progression does not — it has a <strong>date of detection</strong>. We do not know a tumour progressed on the Tuesday; we know it had progressed by the day of the scan. If the protocol schedules imaging every eight weeks, every progression occurring between two assessments is assigned to the date of the second.</p>
+<p>Two consequences. Progression-free survival is <strong>systematically overstated</strong> relative to biological reality, by roughly half the interval between assessments — four weeks, in our example. And more importantly, if the two arms of a trial are not assessed at the same frequency, the comparison is distorted: the more closely watched arm will have its progressions detected earlier and will look worse, without being worse.</p>
+<p>That is why protocols impose an identical assessment schedule in both arms, and why any deviation is a problem. The general rule is worth keeping beyond oncology: <strong>when an event is not observed but detected, the detection apparatus is part of the measurement</strong>. A production incident &quot;occurs&quot; the day the sensor sees it; an invoice &quot;becomes&quot; overdue the day somebody chases it.</p>
+<h2 id="section-7">A hazard ratio is an average like any other</h2>
+<p>One last point, and it is the one that ties this subject to the rest.</p>
+<p>To compare two curves, we almost always publish a <strong>hazard ratio</strong> — 0.72, say. A single number to summarise the comparison of two entire curves. It is convenient, and legitimate as long as one assumption holds: that the ratio between the two hazards stays roughly constant over time.</p>
+<p>When that assumption fails, the number loses its meaning. The best-known case is immunotherapy, whose curves separate late: for the first months the two arms are indistinguishable, or the treatment even does worse, then a subgroup of patients responds durably and the curve forms a plateau. A single hazard ratio averages those two opposite regimes and describes neither. If the curves cross, it can even approach 1 while the treatment radically changes the fate of some patients.</p>
+<p>The attentive reader will recognise <a href="../../en/articles/averages-anscombe-quartet.html">Anscombe&#39;s quartet</a> in another costume. A hazard ratio is to a survival curve what a mean is to a distribution: a summary faithful only if the shape is regular. When it is not, you have to look at the drawing — and publish values at chosen horizons, survival at two years, at five years, rather than a single coefficient.</p>
+<h2 id="section-8">What this changes for valuing an asset</h2>
+<p>Three practical consequences, and all three can be costed.</p>
+<p><strong>The endpoint sets the read-out date, hence the discounting.</strong> Look again at the figure: twelve months against three years for the same trial. An adjuvant programme read on recurrence delivers a result years before the same programme read on overall survival. Two calendars, two present values, one molecule.</p>
+<p><strong>The endpoint sets the residual risk after authorisation.</strong> An authorisation obtained on an intermediate endpoint carries a debt: the confirmatory trial. The <a href="../../en/data/advanced-therapies-eu.html">advanced therapies dataset</a> offers a clean case — Alofisel, the only termination for efficacy among the nine observed, left the market because its confirmatory trial failed to meet its primary endpoint. The authorisation was there, the product was marketed, and the final endpoint settled the matter.</p>
+<p><strong>The endpoint sets the pricing negotiation.</strong> Assessment bodies do not give the same weight to a progression-free survival gain as to an overall survival gain. A valuation model that ignores this implicitly assumes the payer does not tell the difference. The payer does.</p>
+<p>So, faced with a dossier, resist the natural question — <em>by how much does it improve survival?</em> Ask instead: <strong>which event was chosen to be counted, who established it, and how often was it looked for?</strong> The three answers are worth more than the figure they produce.</p>
+<p><em>This article follows on from <a href="../../en/articles/a-duration-is-never-stored-alone.html">a duration is never stored alone</a>, on right-censoring and the Kaplan-Meier estimator.</em></p>
+
+
+      <a href="../insights.html" class="back-link">← All articles</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Antheos Data</strong>
+        <p>
+          Business plans, manufacturing costs, pricing and due diligence for the
+          pharmaceutical industry.
+        </p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../data.html">Observatory</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="mailto:laurent.staub@antheosdata.com">laurent.staub@antheosdata.com</a></li>
+          <li><a href="https://medipile.fr">Médipile</a></li>
+          <li><a href="https://app.antheosdata.com">Shortage tracker</a></li>
+          <li><a href="../legal.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Antheos Data 2023–2026</span>
+      <span>SASU — Paris Trade Register 948 306 865 · 59 rue de Ponthieu, Office 326, 75008 Paris, France</span>
+    </div>
+  </footer>
+
+</body>
+</html>
