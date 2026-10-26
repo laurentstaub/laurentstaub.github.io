@@ -428,6 +428,30 @@ section.band h2 {
 
 .service-card p { font-size: var(--text-base); color: var(--muted); }
 
+/* Interventions en lignes à filets : quatre entrées proches, pas quatre cartes */
+.service-lines { list-style: none; margin: 0; padding: 0; }
+
+.service-lines li {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: baseline;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.service-lines li:last-child { border-bottom: 1px solid var(--line); }
+
+.service-lines h3 { font-size: var(--text-lg); margin: 0; }
+
+.service-lines p { font-size: var(--text-base); color: var(--muted); margin: 0; }
+
+.service-lines .service-more { display: block; margin-top: 8px; font-weight: 600; }
+
+@media (max-width: 860px) {
+  .service-lines li { grid-template-columns: 1fr; gap: 8px; }
+}
+
 /* ---------- Ancrage santé ---------- */
 .anchor-split {
   display: flex;
