@@ -768,6 +768,9 @@ footer a:hover { color: var(--leaf-bright); }
   max-width: 880px;
 }
 
+/* Une seule carte : pas de colonne vide à côté */
+.contact-grid.is-single { grid-template-columns: 1fr; max-width: 560px; }
+
 .contact-card {
   background: var(--white);
   border: 1px solid var(--line);
